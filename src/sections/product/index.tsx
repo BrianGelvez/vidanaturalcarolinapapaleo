@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Product() {
   return (
-    <div className="w-full h-auto bg-white py-5 px-4 md:px-8 lg:px-10 xl:px-16">
+    <div className="w-full h-auto bg-white py-12 px-4 md:px-8 lg:px-10 xl:px-16">
       <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center lg:gap-10">
         {/* Contenedor del título y texto */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
-          <h3 className="text-black text-[40px] md:text-[60px] font-[800] text-center lg:text-left">
+          <h3 className="text-black text-[40px] md:text-[60px] leading-tight font-[800] text-center lg:text-left">
             <span className="text-red-600">Qué es</span> <br /> Vitaly{" "}
             <span className="text-red-600">Plus?</span>
           </h3>
@@ -33,13 +33,13 @@ export default function Product() {
         </div>
 
         {/* Contenedor de la imagen */}
-        <div className="relative py-5 lg:w-1/2">
+        <div className="relative py-5 lg:w-1/2 lg:flex lg:justify-end lg:items-center">
           <Image
             src="/personaSaludable.webp"
             width={400}
             height={400}
             alt="mujer saludable"
-            className="lg:w-[500px]"
+            className="lg:w-[500px] object-cover"
           />
           {/* Gradiente blanco en la parte inferior */}
           <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
