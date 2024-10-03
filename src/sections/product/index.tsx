@@ -2,54 +2,49 @@ import Image from "next/image";
 
 export default function Product() {
   return (
-    <div className="px-3 py-4 flex flex-col items-center relative">
-      <div
-        className="w-full h-[500px] flex flex-col lg:flex-row
-                     justify-start items-center lg:items-start bg-gradient-to-b from-white
-                    to-orange-500 rounded-2xl relative lg:px-24"
-      >
-        <div className="w-full flex flex-col gap-5 px-4 mt-16 lg:mt-24">
-          <h1 className="text-[45px] font-semibold text-center text-green-primary">
-            Vitaly Plus AR
-          </h1>
-          <div className="w-full h-24 border-solid flex justify-center items-center bg-white/60 backdrop-blur-md border-[#777777] border-[1px] rounded-lg">
-            <p className="text-[#555555] text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, est
-              et soluta ipsum nostrum quae consectetur adipisicing elit.
-            </p>
-          </div>
-        </div>
-        <div className="w-full flex flex-col justify-center items-center">
-          {/* Imagen del producto */}
-          <div className="absolute lg:relative lg:-bottom-0 -bottom-32 flex justify-center w-full z-10">
-            <Image
-              src="/VitalyPlus.webp"
-              width={400}
-              height={400}
-              alt="Vitaly Plus"
-              className="drop-shadow-xl"
-            />
-          </div>
-          {/* Botones */}
-          <div className="lg:flex justify-center gap-4 mt-32 lg:mt-0 hidden">
-            <button className="bg-green-primary text-white px-6 py-2 rounded-md hover:bg-green-600 transition duration-300">
+    <div className="w-full h-auto bg-white py-5 px-4 md:px-8 lg:px-10 xl:px-16">
+      <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center lg:gap-10">
+        {/* Contenedor del título y texto */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
+          <h3 className="text-black text-[40px] md:text-[60px] font-[800] text-center lg:text-left">
+            <span className="text-red-600">Qué es</span> <br /> Vitaly{" "}
+            <span className="text-red-600">Plus?</span>
+          </h3>
+          <p className="text-black font-bold text-center lg:text-left">
+            The leading health and beauty product
+          </p>
+
+          {/* Descripciones */}
+          <p className="text-black text-center lg:text-left py-6 text-[17px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p className="text-black text-center lg:text-left py-5 text-[17px]">
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          {/* Botón */}
+          <span className="py-2">
+            <button className="bg-red-600 p-4 md:text-[20px] font-semibold rounded-sm">
               Comprar Ahora
             </button>
-            <button className="bg-orange-primary text-white px-6 py-2 rounded-md hover:bg-orange-600 transition duration-300">
-              Ver Detalles
-            </button>
-          </div>
+          </span>
+        </div>
+
+        {/* Contenedor de la imagen */}
+        <div className="relative py-5 lg:w-1/2">
+          <Image
+            src="/personaSaludable.webp"
+            width={400}
+            height={400}
+            alt="mujer saludable"
+            className="lg:w-[500px]"
+          />
+          {/* Gradiente blanco en la parte inferior */}
+          <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
         </div>
       </div>
-      <div className="flex justify-center gap-4 mt-32 lg:hidden">
-        <button className="bg-green-primary text-white px-6 py-2 rounded-md hover:bg-green-600 transition duration-300">
-          Comprar Ahora
-        </button>
-        <button className="bg-orange-primary text-white px-6 py-2 rounded-md hover:bg-orange-600 transition duration-300">
-          Ver Detalles
-        </button>
-      </div>
-      <div className="w-full h-[1px] bg-green-primary mt-5" />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Home from "@/sections/home";
+import Product from "@/sections/product";
 
 
 export default function Main() {
@@ -7,6 +8,7 @@ export default function Main() {
     <div className="">
       <Header />
       <Home />
+      <Product/>
     </div>
   );
 }

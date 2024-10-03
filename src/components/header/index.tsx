@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 lg:px-10 backdrop-blur-xl absolute top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-20">
+    <header className="px-4 md:px-8 lg:px-10 xl:px-16 backdrop-blur-xl absolute top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-20">
       {" "}
       {/* Cambiamos position a absolute y lo superponemos */}
       <Image
@@ -48,9 +48,9 @@ export default function Header() {
         <div className="hidden lg:flex">
           <Desktop />
         </div>
-        <button className="bg-[#484848] text-slate-200 py-1 px-2 rounded-sm hidden lg:block">
+        {/* <button className="bg-[#484848] text-slate-200 py-1 px-2 rounded-sm hidden lg:block">
           Comprar Vitaly
-        </button>
+        </button> */}
       </div>
     </header>
   );

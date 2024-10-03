@@ -20,16 +20,16 @@ export default function Home() {
      <div className="absolute bottom-0 left-0 w-full h-[15vh] bg-white" />
 
       {/* Contenedor para el contenido */}
-      <div className="absolute top-[150px] lg:top-0 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-48"> 
+      <div className="absolute top-[150px] lg:top-0 w-full flex flex-col lg:flex-row-reverse lg:gap-6 xl:gap-24 lg:justify-center lg:items-start lg:pt-48"> 
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-14">
           <p className="text-[15px] font-light">100% Natural</p>
-          <h1 className="text-[35px] md:text-[50px] text-center lg:text-start text-white font-[1000] leading-tight">
+          <h1 className="text-[40px] md:text-[50px] text-center lg:text-start text-white font-[1000] leading-tight">
             SER VIDA <br />
             SER NATURALEZA <br />
             SER <span className="text-red-600">VITALIDAD</span>
           </h1>
           <div className="w-full flex flex-col py-6 justify-center items-center lg:items-start">
-            <button className="bg-[#484848] p-2 md:text-[20px] font-semibold rounded-sm">
+            <button className="bg-[#484848] p-4 md:text-[20px] font-semibold rounded-sm">
               Comprar Ahora
             </button>
             <p className="text-[10px] md:text-[12px] py-1 text-[#8b8b8b]">
