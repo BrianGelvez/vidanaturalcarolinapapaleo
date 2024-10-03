@@ -41,7 +41,7 @@ export default function Home() {
 
         <div className="lg:w-1/2 flex justify-center lg:justify-end lg:pr-6">
           <Image
-            src="/vitalyPlus.webp"
+            src="/VitalyPlus.webp"
             width={300}
             height={300}
             alt="Vitaly Plus"
