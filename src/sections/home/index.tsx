@@ -20,7 +20,7 @@ export default function Home() {
      {/* <div className="absolute bottom-0 left-0 w-full h-[15vh] bg-white" /> */}
 
       {/* Contenedor para el contenido */}
-      <div className="absolute top-[150px] lg:top-0 w-full flex flex-col lg:flex-row-reverse lg:gap-6 xl:gap-24 lg:justify-center lg:items-start lg:pt-48"> 
+      <div className="absolute top-[150px] lg:top-0 w-full flex flex-col lg:flex-row-reverse lg:gap-6 xl:gap-36 lg:justify-center lg:items-start lg:pt-48"> 
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-14">
           <p className="text-[15px] font-light">100% Natural</p>
           <h1 className="text-[40px] md:text-[50px] text-center lg:text-start text-white font-[1000] leading-tight">

@@ -14,20 +14,19 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 md:px-8 lg:px-10 xl:px-16 backdrop-blur-xl absolute top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-20">
-      {" "}
-      {/* Cambiamos position a absolute y lo superponemos */}
+    <header className="px-4 md:px-8 lg:px-10 xl:px-16 backdrop-blur-xl bg-slate-500/50 fixed top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-20">
+      {/* Logo */}
       <Image
         src="/LogoVidaNaturalBlanco.webp"
         width={150}
         height={150}
         alt="Logo Vida Natural, sentirse bien"
       />
+
+      {/* Menú de navegación */}
       <div className="w-auto flex flex-row justify-center items-center gap-3 lg:gap-12">
-        {/* <button className="bg-[#484848] text-slate-200 py-[2px] px-2 rounded-sm block lg:hidden">
-          Comprar Vitaly
-        </button> */}
         <div className="lg:hidden">
+          {/* Menú hamburguesa para móviles */}
           <label
             htmlFor="menu"
             className="cursor-pointer flex justify-end items-end"
@@ -45,12 +44,11 @@ export default function Header() {
           </label>
           <Mobile opened={opened} handleClickClose={() => setOpened(false)} />
         </div>
+        
+        {/* Menú de escritorio */}
         <div className="hidden lg:flex">
           <Desktop />
         </div>
-        {/* <button className="bg-[#484848] text-slate-200 py-1 px-2 rounded-sm hidden lg:block">
-          Comprar Vitaly
-        </button> */}
       </div>
     </header>
   );

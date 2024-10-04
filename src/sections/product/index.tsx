@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Product() {
   return (
     <div className="w-full h-auto bg-white py-12 px-4 md:px-8 lg:px-10 xl:px-16">
-      <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center lg:gap-10">
+      <div className="w-full flex flex-col lg:flex-row lg:justify-center items-center lg:gap-10 xl:px-36">
         {/* Contenedor del título y texto */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
           <h3 className="text-black text-[40px] md:text-[60px] leading-tight font-[800] text-center lg:text-left">
@@ -33,7 +33,7 @@ export default function Product() {
         </div>
 
         {/* Contenedor de la imagen */}
-        <div className="relative py-5 lg:w-1/2 lg:flex lg:justify-end lg:items-center">
+        <div className="relative py-5 lg:flex lg:justify-end lg:items-center">
           <Image
             src="/personaSaludable.webp"
             width={400}
