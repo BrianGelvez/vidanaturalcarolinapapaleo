@@ -23,7 +23,7 @@ interface MobileProps {
 export default function Mobile({ opened, handleClickClose }: MobileProps) {
   return (
     <nav
-      className={`fixed top-0 left-0 h-screen bg-[#484848]/80 w-44 z-50 transform ${
+      className={`fixed top-0 left-0 h-screen bg-red-600 w-44 z-50 transform ${
         opened ? "translate-x-0" : "-translate-x-full"
       } transition-transform duration-300 ease-in-out`}
     >
