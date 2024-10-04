@@ -14,7 +14,7 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 md:px-8 lg:px-10 xl:px-16 backdrop-blur-xl bg-slate-500/50 fixed top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-20">
+    <header className="px-4 md:px-8 lg:px-10 xl:px-16 backdrop-blur-xl bg-slate-500/50 fixed top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-[1000]">
       {/* Logo */}
       <Image
         src="/LogoVidaNaturalBlanco.webp"
