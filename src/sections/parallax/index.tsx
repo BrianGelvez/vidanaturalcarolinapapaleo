@@ -8,7 +8,7 @@ export default function Parallax() {
       <div
         className="absolute top-0 left-0 h-full w-full bg-cover bg-center bg-fixed block lg:hidden"
         style={{
-          backgroundImage: "url(/fondoRedHomeMobile.webp)",
+          backgroundImage: "url(/FondoRedHomeMobile.webp)",
         }}
       />
       <div
