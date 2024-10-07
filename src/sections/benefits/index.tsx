@@ -77,7 +77,7 @@ export default function Benefits() {
       </div>
 
       <div className="w-full flex flex-col justify-center items-center lg:items-start z-20 relative">
-        <h1 className="text-[40px] lg:text-[45px] font-[700] leading-tight">
+        <h1 className="text-[40px] text-center lg:text-start lg:text-[45px] font-[700] leading-tight">
           Una vida más saludable.
         </h1>
         <p className="py-4 text-[17px]">For digestive health and support</p>

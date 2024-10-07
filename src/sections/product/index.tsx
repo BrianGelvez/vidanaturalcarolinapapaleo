@@ -35,7 +35,7 @@ export default function Product() {
         {/* Contenedor de la imagen */}
         <div className="relative py-5 lg:flex lg:justify-end lg:items-center">
           <Image
-            src="/personaSaludable.webp"
+            src="/personaSaludable2.webp"
             width={400}
             height={400}
             alt="mujer saludable"
