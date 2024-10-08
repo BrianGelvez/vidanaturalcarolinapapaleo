@@ -53,7 +53,7 @@ export default function Home() {
         {/* <p className="text-slate-200 underline">Ventas por mayor y menor</p> */}
         <p className="text-white text-xl lg:text-2xl xl:text-3xl">
           📦Envio{" "}
-          <span className="text-brown-secundary font-semibold">gratis</span>{" "}
+          <span className="text-brown-secundary font-semibold text-red-600">gratis</span>{" "}
           a todo el pais!📦
         </p>
       </div>
