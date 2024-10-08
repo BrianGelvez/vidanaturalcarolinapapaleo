@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import classNames from "classnames";
 import { useState } from "react";
+import Image from "next/image";
 import Mobile from "./partials/mobile";
+import classNames from "classnames";
 import Desktop from "./partials/desktop";
+import Link from "next/link";
 
 export default function Header() {
   const [opened, setOpened] = useState(false);
@@ -14,42 +15,54 @@ export default function Header() {
   };
 
   return (
-    <header className="px-4 md:px-8 lg:px-10 xl:px-16 backdrop-blur-xl bg-slate-500/50 fixed top-0 left-0 w-full h-24 flex flex-row justify-between items-center z-[1000]">
-      {/* Logo */}
-      <Image
-        src="/LogoVidaNaturalBlanco.webp"
-        width={150}
-        height={150}
-        alt="Logo Vida Natural, sentirse bien"
-      />
-
-      {/* Menú de navegación */}
-      <div className="w-auto flex flex-row justify-center items-center gap-3 lg:gap-12">
-        <div className="lg:hidden">
-          {/* Menú hamburguesa para móviles */}
-          <label
-            htmlFor="menu"
-            className="cursor-pointer flex justify-end items-end"
-            onClick={handleToggle}
-          >
-            <div
-              className={classNames(`tham tham-e-squeeze tham-w-9`, {
-                "tham-active": opened,
-              })}
+    <div
+      className={`fixed top-0 left-1/2 -translate-x-1/2 
+                 w-full xl:w-container backdrop-blur-md bg-slate-500/50 shadow-md z-50`}
+    >
+      <div className="relative w-full flex flex-row justify-between items-start py-6 px-4">
+        <span className="cursor-pointer mt-2">
+          <Link href="/">
+            <Image
+              width={200}
+              height={200}
+              src="/LogoVidaNaturalBlanco.webp"
+              alt="Logo de Diego Bustos, abogado penalista"
+            />
+          </Link>
+        </span>
+        <div className="w-full flex flex-col justify-center items-center lg:items-end">
+          <div className="w-full flex flex-col items-end lg:hidden">
+            <label
+              htmlFor="menu"
+              className="cursor-pointer flex justify-end items-end"
+              onClick={handleToggle}
             >
-              <div className="tham-box">
-                <div className="tham-inner bg-white" />
+              <div
+                className={classNames(
+                  "tham tham-e-squeeze tham-w-8",
+                  { "tham-active": opened },
+                  ""
+                )}
+              >
+                <div className="tham-box mt-6">
+                  <div className="tham-inner bg-white" />
+                </div>
               </div>
-            </div>
-          </label>
-          <Mobile opened={opened} handleClickClose={() => setOpened(false)} />
-        </div>
-        
-        {/* Menú de escritorio */}
-        <div className="hidden lg:flex">
-          <Desktop />
+            </label>
+            <input
+              id="menu"
+              name="menu"
+              type="checkbox"
+              placeholder="menu"
+              className="peer/menu hidden"
+            />
+            <Mobile handleClickClose={() => setOpened(false)} />
+          </div>
+          <div className="hidden lg:flex">
+            <Desktop />
+          </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 }

@@ -1,54 +1,40 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 
-interface NavItem {
-  id: number;
-  text: string;
-  idLink: string;
-}
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default function Mobile(handleClickClose: any) {
+  const navItems = [
+    { id: 0, text: "INICIO", idLink: "/" },
+    { id: 1, text: "SOMBRE MI", idLink: "aboutMe" },
+    { id: 2, text: "SERVICIOS", idLink: "services" },
+    { id: 3, text: "TESTIMONIOS", idLink: "testimonies" },
+    { id: 4, text: "FAQ", idLink: "faq" },
+    { id: 5, text: "CONTACTO", idLink: "contact" },
+    { id: 6, text: "BLOG SEMANAL", idLink: "blog" },
+  ];
 
-const navItems: NavItem[] = [
-  { id: 0, text: "INICIO", idLink: "/" },
-  { id: 1, text: "SOBRE MI", idLink: "aboutMe" },
-  { id: 2, text: "PRODUCTO", idLink: "services" },
-  { id: 3, text: "TESTIMONIOS", idLink: "testimonies" },
-  { id: 4, text: "PREG. FRECUENTES", idLink: "faq" },
-];
-
-interface MobileProps {
-  opened: boolean;
-  handleClickClose: () => void;
-}
-
-export default function Mobile({ opened, handleClickClose }: MobileProps) {
   return (
-    <nav
-      className={`fixed top-0 left-0 h-screen bg-red-600 w-44 z-50 transform ${
-        opened ? "translate-x-0" : "-translate-x-full"
-      } transition-transform duration-300 ease-in-out`}
+    <div
+      className=" 
+          w-full max-h-0
+          z-50
+          mr-[42px] mt-5
+          peer-checked/menu:max-h-96
+          transition-all duration-300 
+          overflow-hidden
+           "
     >
-      <div className="flex flex-col h-full">
-        <ul className="flex flex-col space-y-4 py-2 pl-2">
-          <Image
-            src="/LogoVidaNaturalBlanco.webp"
-            className="mt-6 ml-2"
-            width={150}
-            height={150}
-            alt="Logo Vida Natural Blanco, menu deslpegable"
-          />
-          {navItems.map((item) => (
-            <li key={item.id}>
-              <Link
-                href={item.idLink}
-                className="block py-2 px-3 text-slate-200 hover:bg-green-500 transition-colors duration-200"
-                onClick={handleClickClose}
-              >
-                {item.text}
-              </Link>
-            </li>
-          ))}
+      {navItems.map((item) => (
+        <ul
+          key={item.id}
+          className="w-full flex relative flex-col justify-center items-center gap-6 pt-5 text-xl"
+        >
+          <li onClick={handleClickClose} className="mr-10 text-slate-50 hover:text-slate-300">
+            <Link href={item.idLink} scroll={true}>{item.text}</Link>
+          </li>
         </ul>
-      </div>
-    </nav>
+      ))}
+    </div>
   );
 }
