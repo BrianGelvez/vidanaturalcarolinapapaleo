@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Product() {
   return (
-    <div className="w-full h-auto bg-white py-12 px-4 md:px-8 lg:px-10 xl:px-16">
-      <div className="w-full flex flex-col lg:flex-row lg:justify-center items-center lg:gap-10 xl:px-36">
+    <div className="w-full h-auto bg-white py-12 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48">
+      <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center lg:gap-10">
         {/* Contenedor del título y texto */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
           <h3 className="text-black text-[50px] md:text-[60px] lg:text-[63px] leading-tight font-[800] text-center lg:text-left">

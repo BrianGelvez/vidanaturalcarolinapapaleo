@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Benefits() {
   return (
-    <div className="relative w-full h-auto flex flex-col lg:flex-row gap-12 py-12 px-4 md:px-8 lg:px-10 xl:px-16">
+    <div className="relative w-full h-auto flex flex-col lg:flex-row gap-12 py-12 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48">
       {/* Div blanco que sobresale un poco en la parte inferior */}
       <div className="absolute bottom-[-20px] left-0 w-full h-[15vh] bg-white z-10" />
 

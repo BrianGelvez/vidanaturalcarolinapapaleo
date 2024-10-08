@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-red-800 py-8 px-4 md:px-8 lg:px-16 text-white">
-      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+    <footer className="w-full bg-red-800 py-8 px-4 md:px-8 lg:px-16 2xl:px-48 text-white">
+      <div className="mx-auto flex flex-col items-center text-center">
         <h2 className="text-4xl font-semibold mb-2">Suscribite ya</h2>
         <p className="text-sm mb-6">
           Recibe noticias semanales de nuestros mejores productos
@@ -12,7 +12,7 @@ export default function Footer() {
           <input
             type="email"
             placeholder="Tu mail..."
-            className="flex-grow py-2 px-3 text-black rounded-l-sm focus:outline-none"
+            className="flex-grow py-2 text-black rounded-l-sm focus:outline-none"
           />
           <button
             type="submit"
