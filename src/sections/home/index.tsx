@@ -19,7 +19,7 @@ export default function Home() {
       />
 
       {/* Contenedor para el contenido */}
-      <div className="absolute top-[80px] lg:top-0 w-full flex flex-col lg:flex-row-reverse lg:gap-6 xl:gap-36 lg:justify-center lg:items-start lg:pt-48">
+      <div className="absolute top-[190px] lg:top-0 w-full flex flex-col lg:flex-row-reverse lg:gap-6 xl:gap-36 lg:justify-center lg:items-start lg:pt-48">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-14">
           <p className="text-[15px] font-light">100% Natural</p>
           <h1 className="text-[40px] md:text-[50px] lg:text-[55px] text-center lg:text-start text-white font-[1000] leading-tight">
@@ -48,8 +48,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Sección de Envío Gratis */}
-      <div className="w-full h-auto p-2 backdrop-blur-md bg-white/20 mt-[95px] lg:mt-[120px] flex flex-col justify-center items-center italic">
+      {/* Banner de Envío Gratis */}
+      <div className="absolute top-[12%] left-0 w-full h-auto p-2 backdrop-blur-md bg-white/20 z-10 flex flex-col justify-center items-center italic">
         {/* <p className="text-slate-200 underline">Ventas por mayor y menor</p> */}
         <p className="text-white text-xl lg:text-2xl xl:text-3xl">
           📦Envio{" "}
