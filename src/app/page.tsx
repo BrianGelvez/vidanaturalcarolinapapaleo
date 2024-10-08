@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Benefits from "@/sections/benefits";
+import Footer from "@/sections/footer";
 import FourSteps from "@/sections/fourSteps";
 import Home from "@/sections/home";
 import Parallax from "@/sections/parallax";
@@ -19,6 +20,7 @@ export default function Main() {
       <Parallax/>
       <Testimonies/>
       <ProductPrice/>
+      <Footer/>
     </div>
   );
 }
