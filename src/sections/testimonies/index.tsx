@@ -13,7 +13,7 @@ export default function Testimonies() {
             calidad de vida
           </h2>
           <div
-            className="w-full flex flex-row overflow-x-auto gap-4 justify-start
+            className="w-full flex flex-row overflow-x-auto gap-4 lg:gap-12 justify-start
                          md:justify-center items-center py-8"
           >
             {/* Testimonio 1 */}
@@ -32,7 +32,7 @@ export default function Testimonies() {
                   alt="Testimonio de cliente"
                   width={1000}
                   height={1000}
-                  className="rounded-full object-cover w-20 h-20 border-solid border-[2px] border-red-600"
+                  className="rounded-full object-cover w-[100px] h-[100px] border-solid border-[2px] border-red-600"
                 />
               </div>
               <div className="w-full flex flex-col justify-start items-start">
@@ -56,7 +56,7 @@ export default function Testimonies() {
                   alt="Testimonio de cliente"
                   width={1000}
                   height={1000}
-                  className="rounded-full object-cover w-20 h-20 border-solid border-[2px] border-red-600"
+                  className="rounded-full object-cover w-[100px] h-[100px] border-solid border-[2px] border-red-600"
                 />
               </div>
               <div className="w-full flex flex-col justify-start items-start">
@@ -80,7 +80,7 @@ export default function Testimonies() {
                   alt="Testimonio de cliente"
                   width={1000}
                   height={1000}
-                  className="rounded-full object-cover w-20 h-20 border-solid border-[2px] border-red-600"
+                  className="rounded-full object-cover w-[100px] h-[100px] border-solid border-[2px] border-red-600"
                 />
               </div>
               <div className="w-full flex flex-col justify-start items-start">
@@ -104,7 +104,7 @@ export default function Testimonies() {
                   alt="Testimonio de cliente"
                   width={1000}
                   height={1000}
-                  className="rounded-full object-cover w-20 h-20 border-solid border-[2px] border-red-600"
+                  className="rounded-full object-cover w-[100px] h-[100px] border-solid border-[2px] border-red-600"
                 />
               </div>
               <div className="w-full flex flex-col justify-start items-start">
@@ -128,7 +128,7 @@ export default function Testimonies() {
                   alt="Testimonio de cliente"
                   width={1000}
                   height={1000}
-                  className="rounded-full object-cover w-20 h-20 border-solid border-[2px] border-red-600"
+                  className="rounded-full object-cover w-[100px] h-[100px] border-solid border-[2px] border-red-600"
                 />
               </div>
               <div className="w-full flex flex-col justify-start items-start">

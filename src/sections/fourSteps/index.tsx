@@ -17,8 +17,6 @@ export default function FourSteps() {
               height={450}
               className="rounded-lg shadow-lg object-cover lg:w-[800px]"
             />
-            <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
           </div>
 
           <div className="w-full flex flex-col md:flex-row justify-center items-center gap-8 mt-10">

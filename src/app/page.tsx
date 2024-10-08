@@ -4,6 +4,7 @@ import FourSteps from "@/sections/fourSteps";
 import Home from "@/sections/home";
 import Parallax from "@/sections/parallax";
 import Product from "@/sections/product";
+import ProductPrice from "@/sections/productPrice";
 import Testimonies from "@/sections/testimonies";
 
 
@@ -17,6 +18,7 @@ export default function Main() {
       <FourSteps/>
       <Parallax/>
       <Testimonies/>
+      <ProductPrice/>
     </div>
   );
 }
