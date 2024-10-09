@@ -8,7 +8,7 @@ export default function Testimonies() {
     >
       <div className="w-full flex flex-col justify-center items-center">
         <div className="w-full flex flex-col gap-12 justify-center items-center">
-          <h2 className="text-[35px] font-bold text-center leading-tight">
+          <h2 className="text-white text-[40px] md:text-[45px] font-[800] text-center leading-tight">
             Personas que <span className="text-red-600">mejoraron</span> su
             calidad de vida
           </h2>

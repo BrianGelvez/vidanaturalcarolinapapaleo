@@ -16,10 +16,10 @@ export default function ProductPrice() {
           />
         </div>
         <div className="w-full flex flex-col gap-3 justify-start items-start">
-          <p className="text-red-600 text-[40px] font-[900] text-start leading-tight">
+          <p className="text-red-600 text-[40px] md:text-[45px] leading-tight font-[800] text-start">
             Proba cambiar tu vida hoy
           </p>
-          <p className="text-black text-start text-[16px] font-[500]">
+          <p className="text-black font-bold text-[20px] md:text-[22px] text-start ">
             El mejor cambio de tu vida, al mejor precio de tu vida.
           </p>
           <div className="w-full flex flex-row gap-12 justify-start items-start">
