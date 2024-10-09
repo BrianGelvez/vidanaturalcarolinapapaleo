@@ -16,11 +16,11 @@ export default function Header() {
 
   return (
     <div
-      className={`fixed top-0 left-1/2 -translate-x-1/2 
+      className={`absolute top-0 left-1/2 -translate-x-1/2 
                  w-full xl:w-container backdrop-blur-md bg-slate-500/50 shadow-md z-50`}
     >
-      <div className="relative w-full flex flex-row justify-between items-start py-6 px-4">
-        <span className="cursor-pointer mt-2">
+      <div className="relative w-full flex flex-row justify-between items-start py-6 px-4 lg:px-10 xl:px-16 2xl:px-48">
+        <span className="cursor-pointer mt-1 lg:mt-0">
           <Link href="/">
             <Image
               width={200}

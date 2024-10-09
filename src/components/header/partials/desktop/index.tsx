@@ -13,7 +13,7 @@ export default function Desktop() {
 
   return (
     <div className="hidden lg:flex">
-      <ul className="flex space-x-6">
+      <ul className="flex space-x-6 lg:mt-2">
         {navItems.map((item) => (
           <ul key={item.id}>
             <li className="text-slate-200 hover:text-slate-400 transition duration-300">

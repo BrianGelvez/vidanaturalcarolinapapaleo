@@ -19,7 +19,7 @@ export default function Mobile(handleClickClose: any) {
       className=" 
           w-full max-h-0
           z-50
-          mr-[42px] mt-5
+          mr-[44px] mt-5
           peer-checked/menu:max-h-96
           transition-all duration-300 
           overflow-hidden
