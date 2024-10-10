@@ -1,7 +1,9 @@
+import Header from "@/components/header";
+
 export default function DatosDeEnvio() {
-    return (
-        <div>
-            datos de envio
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 }
