@@ -3,8 +3,9 @@ import Image from "next/image";
 export default function ProductPrice() {
   return (
     <div
+    id="comprar"
       className="bg-white w-full h-auto flex flex-col lg:flex-row
-                    gap-12 py-12 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
+                    gap-12 py-24 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center">
         <div className="w-full flex flex-col justify-center items-center py-4">

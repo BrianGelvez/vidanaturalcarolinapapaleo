@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function FourSteps() {
   return (
-    <div className="relative w-full h-auto bg-white py-8 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48">
+    <div id="sobremi" className="relative w-full h-auto bg-white pt-24 pb-8 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48">
       <div className="w-full flex flex-col justify-center items-center">
         <h3 className="text-red-600 text-[40px] md:text-[45px] leading-tight font-[800] text-center">
           Cambia tu vida

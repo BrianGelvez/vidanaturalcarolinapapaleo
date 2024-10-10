@@ -3,8 +3,9 @@ import Image from "next/image";
 export default function Testimonies() {
   return (
     <div
+    id="testimonios"
       className="relative w-full h-auto flex flex-col lg:flex-row gap-12
-                    py-12 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
+                    py-24 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
     >
       <div className="w-full flex flex-col justify-center items-center">
         <div className="w-full flex flex-col gap-12 justify-center items-center">
