@@ -1,8 +1,5 @@
 "use client";
 
-// import Link from "next/link";
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function Mobile() {
   const navItems = [
     { id: 0, text: "INICIO", idLink: "#inicio" },
@@ -25,7 +22,7 @@ export default function Mobile() {
       className="
         w-full max-h-0
         z-50
-        mr-[44px] mt-5
+        mr-[55px] mt-5
         peer-checked/menu:max-h-96
         transition-all duration-300 
         overflow-hidden
