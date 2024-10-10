@@ -18,6 +18,8 @@ export default function Home() {
         className="flex lg:hidden"
       />
 
+<div className="absolute inset-0 bg-black/60"></div>
+
       {/* Contenedor para el contenido */}
       <div className="absolute top-[190px] lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-16 lg:justify-center lg:items-start lg:pt-48">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-20">

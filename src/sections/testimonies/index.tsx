@@ -14,7 +14,7 @@ export default function Testimonies() {
           </h2>
           <div
             className="w-full flex flex-row overflow-x-auto gap-4 lg:gap-12 justify-start
-                         md:justify-center items-center lg:justify-start py-8"
+                         md:justify-center items-center lg:justify-start 2xl:justify-center py-8"
           >
             {/* Testimonio 1 */}
             <div

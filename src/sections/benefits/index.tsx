@@ -85,7 +85,7 @@ export default function Benefits() {
           width={400}
           height={400}
           alt="icono saludable"
-          className="w-full"
+          className="w-full rounded-sm"
         />
       </div>
     </div>
