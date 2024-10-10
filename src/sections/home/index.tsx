@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative w-full h-screen lg:h-[800px]">
+    <div id="inicio" className="relative w-full h-screen lg:h-[800px]">
       <Image
         src="/FondoRedHome.webp"
         layout="fill"
