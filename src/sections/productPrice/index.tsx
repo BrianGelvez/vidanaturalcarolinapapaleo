@@ -3,12 +3,15 @@ import Image from "next/image";
 export default function ProductPrice() {
   return (
     <div
-    id="comprar"
+      id="comprar"
       className="bg-white w-full h-auto flex flex-col lg:flex-row
-                    gap-12 py-24 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
+                    gap-12 pt-24 pb-14 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center">
-        <div className="w-full flex flex-col justify-center items-center py-4">
+        <div className="w-full flex flex-col justify-center items-center gap-4 ">
+          <p className="text-[#272727] text-[40px] md:text-[45px] font-[800]">
+            Vitaly Plus✨
+          </p>
           <Image
             src="/VitalyPlus.webp"
             width={300}
@@ -36,25 +39,34 @@ export default function ProductPrice() {
             </div>
           </div>
           <div className="py-4 flex flex-col gap-3">
-            <button className="bg-[#484848]/60 backdrop-blur-sm w-[180px] md:w-[200px] lg:w-[230px] p-4 md:text-[20px] lg:text-[22px] font-semibold rounded-sm">
+            <a
+              href="datosDeEnvio"
+              className="bg-[#484848]/60 text-center backdrop-blur-sm w-[180px] md:w-[200px] lg:w-[230px] p-4 md:text-[20px] lg:text-[22px] font-semibold rounded-sm"
+            >
               Comprar Ahora
-            </button>
-            <p className="text-[#2e2e2e] text-[15px]">
-              Envio gratis a toda Argentina
+            </a>
+            <p className="text-[#2e2e2e] font-[500] text-[20px] italic">
+              * Envio gratis a todo el pais por correo Argentino
             </p>
+            <Image src="/correoargentino.png" width={70} height={70} alt="tarjetavisa" />
           </div>
+          <div className="w-full flex flex-row flex-wrap items-start justify-start gap-4 pt-4">
+          <Image src="/amex.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/argencard.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/cabal.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/cencosud.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/diners.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/maestro.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/mastercard.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/naranja.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/pagofacil.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/rapipago.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/tarjeta-shopping.png" width={50} height={50} alt="tarjetavisa" />
+          <Image src="/visa.png" width={50} height={50} alt="tarjetavisa" />
         </div>
+        </div>
+
       </div>
     </div>
   );
-}
-
-{
-  /* <div className="w-full absolute mb-[450px] h-auto p-2 backdrop-blur-md bg-black/20 lg:mt-[120px] flex flex-col justify-center items-center italic">
-<p className="text-white text-xl lg:text-2xl xl:text-3xl">
-  📦Envio
-  <span className="text-brown-secundary font-semibold">gratis</span>
-  a todo el pais!📦
-</p>
-</div> */
 }

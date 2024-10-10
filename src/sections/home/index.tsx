@@ -1,6 +1,14 @@
 import Image from "next/image";
 
 export default function Home() {
+
+  const handleScroll = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <div id="inicio" className="relative w-full h-screen lg:h-[800px]">
       <Image
@@ -31,7 +39,9 @@ export default function Home() {
           </h1>
 
           <div className="w-full flex flex-col py-6 justify-center items-center lg:items-start gap-2">
-            <button className="bg-[#484848]/60 backdrop-blur-sm lg:w-[262px] p-4 md:text-[18px] font-semibold rounded-sm">
+            <button 
+            onClick={() => handleScroll("#comprar")}
+             className="bg-[#484848]/60 backdrop-blur-sm lg:w-[262px] p-4 md:text-[18px] font-semibold rounded-sm">
               Comprar Ahora
             </button>
             {/* <p className="text-[10px] md:text-[12px] lg:text-[14px] py-1 text-[#8b8b8b]">

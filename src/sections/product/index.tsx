@@ -1,8 +1,18 @@
 import Image from "next/image";
 
 export default function Product() {
+  const handleScroll = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <div id="vitalyplus" className="w-full h-auto bg-white pt-24 pb-12 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48">
+    <div
+      id="vitalyplus"
+      className="w-full h-auto bg-white pt-24 pb-12 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
+    >
       <div className="w-full flex flex-col lg:flex-row lg:justify-between items-center lg:gap-10">
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start">
           <h3 className="text-black text-[40px] md:text-[45px] leading-tight font-[800] text-center lg:text-left">
@@ -23,7 +33,10 @@ export default function Product() {
           </p>
 
           <span className="py-2">
-            <button className="bg-red-600/80 backdrop-blur-md  p-4 md:text-[20px] font-semibold rounded-sm">
+            <button
+              onClick={() => handleScroll("#comprar")}
+              className="bg-red-600/80 backdrop-blur-md  p-4 md:text-[20px] font-semibold rounded-sm"
+            >
               Comprar Ahora
             </button>
           </span>
