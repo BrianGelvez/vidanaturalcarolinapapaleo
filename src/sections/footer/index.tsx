@@ -18,7 +18,7 @@ export default function Footer() {
             type="submit"
             className="bg-red-600 hover:bg-red-700 py-2 px-8 rounded-r-sm transition duration-300"
           >
-            ok
+            Enviar
           </button>
         </div>
         <div className="mt-8 text-xs w-full flex flex-col justify-center items-center opacity-80">
