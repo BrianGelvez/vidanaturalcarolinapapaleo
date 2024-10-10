@@ -23,7 +23,7 @@ export default function Product() {
           </p>
 
           <span className="py-2">
-            <button className="bg-red-600 p-4 md:text-[20px] font-semibold rounded-sm">
+            <button className="bg-red-600/80 backdrop-blur-md  p-4 md:text-[20px] font-semibold rounded-sm">
               Comprar Ahora
             </button>
           </span>

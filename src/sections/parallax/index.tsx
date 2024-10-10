@@ -14,7 +14,7 @@ export default function Parallax() {
       <div
         className="absolute top-0 left-0 h-full w-full bg-cover bg-center bg-fixed hidden lg:block"
         style={{
-          backgroundImage: "url(/parallax.webp)",
+          backgroundImage: "url(/FondoRedHome.webp)",
         }}
       />
       {/* Contenido superpuesto */}

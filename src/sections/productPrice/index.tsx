@@ -35,7 +35,7 @@ export default function ProductPrice() {
             </div>
           </div>
           <div className="py-4 flex flex-col gap-3">
-            <button className="bg-[#484848] w-[180px] md:w-[200px] lg:w-[230px] p-4 md:text-[20px] lg:text-[22px] font-semibold rounded-sm">
+            <button className="bg-[#484848]/60 backdrop-blur-sm w-[180px] md:w-[200px] lg:w-[230px] p-4 md:text-[20px] lg:text-[22px] font-semibold rounded-sm">
               Comprar Ahora
             </button>
             <p className="text-[#2e2e2e] text-[15px]">
