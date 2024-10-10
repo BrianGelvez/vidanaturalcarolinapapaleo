@@ -79,7 +79,7 @@ export default function Benefits() {
         <h1 className="text-white text-[40px] md:text-[45px] leading-tight font-[800] text-center lg:text-start">
           Una vida más saludable.
         </h1>
-        <p className="py-4 text-[17px]">For digestive health and support</p>
+        <p className="pb-4 text-[17px]">For digestive health and support</p>
         <Image
           src="/adultoSaludable.webp"
           width={400}

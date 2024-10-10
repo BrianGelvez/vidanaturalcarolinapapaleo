@@ -13,8 +13,8 @@ export default function Testimonies() {
             calidad de vida
           </h2>
           <div
-            className="w-full flex flex-row overflow-x-auto gap-4 lg:gap-12 justify-start
-                         md:justify-center items-center py-8"
+            className="w-full flex flex-row overflow-x-auto gap-4 lg:gap-12 bg-red-500 justify-start
+                         md:justify-center items-center lg:justify-start py-8"
           >
             {/* Testimonio 1 */}
             <div

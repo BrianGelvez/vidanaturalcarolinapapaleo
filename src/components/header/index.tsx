@@ -43,7 +43,7 @@ export default function Header() {
                   ""
                 )}
               >
-                <div className="tham-box mt-6">
+                <div className="tham-box mt-5">
                   <div className="tham-inner bg-white" />
                 </div>
               </div>
