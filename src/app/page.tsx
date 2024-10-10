@@ -44,9 +44,10 @@ export default function Main() {
     <div>
       <Header />
       <Home />
-      <Product />
-      <Benefits />
       <FourSteps />
+      
+      <Benefits />
+      <Product />
       <Parallax />
       <Testimonies />
       <ProductPrice />

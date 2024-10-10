@@ -21,7 +21,7 @@ export default function Desktop() {
     <div className="hidden lg:flex">
       <ul className="flex space-x-6 lg:mt-2">
         {navItems.map((item) => (
-          <li key={item.id} onClick={() => handleScroll(item.idLink)} className="text-slate-200 hover:text-slate-400 transition duration-300 cursor-pointer">
+          <li key={item.id} onClick={() => handleScroll(item.idLink)} className="text-slate-200 hover:text-slate-400 font-extralight transition duration-300 cursor-pointer">
             {/* Usamos un <span> en lugar de <Link> para evitar el comportamiento por defecto */}
             <span>{item.text}</span>
           </li>

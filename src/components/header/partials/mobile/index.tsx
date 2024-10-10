@@ -35,7 +35,7 @@ export default function Mobile() {
         >
           <li
             onClick={() => handleScroll(item.idLink)}
-            className="mr-10 text-slate-50 hover:text-slate-300 cursor-pointer"
+            className="mr-10 text-slate-50 hover:text-slate-300 font-extralight cursor-pointer"
           >
             {item.text}
           </li>
