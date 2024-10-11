@@ -3,11 +3,11 @@
 export default function Desktop() {
   const navItems = [
     { id: 0, text: "Inicio", idLink: "#inicio" },
-    { id: 1, text: "Vitaly Plus", idLink: "#vitalyplus" },
-    { id: 2, text: "Beneficios", idLink: "#beneficios" },
-    { id: 3, text: "Sobre mi", idLink: "#sobremi" },
-    { id: 4, text: "Testimonios", idLink: "#testimonios" },
-    { id: 5, text: "Comprar Vitaly", idLink: "#comprar" },
+    { id: 2, text: "Sobre mi", idLink: "#sobremi" },
+    { id: 3, text: "Beneficios", idLink: "#beneficios" },
+    { id: 4, text: "Vitaly Plus", idLink: "#vitalyplus" },
+    { id: 5, text: "Testimonios", idLink: "#testimonios" },
+    { id: 6, text: "Comprar Vitaly", idLink: "#comprar" },
   ];
 
   const handleScroll = (id: string) => {

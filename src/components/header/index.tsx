@@ -29,8 +29,8 @@ export default function Header() {
         <span className="cursor-pointer mt-1 lg:mt-0">
           <Link href="/">
             <Image
-              width={200}
-              height={200}
+              width={180}
+              height={180}
               src="/LogoVidaNaturalBlanco.webp"
               alt="Logo de Diego Bustos, abogado penalista"
             />
