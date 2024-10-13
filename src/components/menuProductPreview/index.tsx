@@ -11,7 +11,7 @@ export default function MenuProductPreview() {
               peer-checked/menu:max-h-96
               transition-all duration-300 
               overflow-hidden
-              bg-[#f5f5f5] 
+              bg-[#f5f5f5]/70 backdrop-blur-sm
               shadow-lg 
               rounded-5
               "
