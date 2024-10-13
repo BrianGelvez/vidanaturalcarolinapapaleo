@@ -5,7 +5,7 @@ export default function Shipments() {
     <div className="w-full h-auto px-4">
       <div className="w-full">
         <Image
-          src="/correoArgentinotransparente.webp"
+          src="/correoArgentinoTransparente.webp"
           width={1000}
           height={1000}
           alt="correoAgentino"

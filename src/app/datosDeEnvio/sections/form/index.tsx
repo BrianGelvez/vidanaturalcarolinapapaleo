@@ -21,7 +21,7 @@ export default function Form() {
           </span>
           <span className="w-full flex flex-col gap-2">
             <label htmlFor="name" className="text-slate-700">
-              Telefono *
+              Correo *
             </label>
             <input
               type="number"
@@ -30,14 +30,23 @@ export default function Form() {
             />
           </span>
           <span className="w-full flex flex-col gap-2">
-            <label htmlFor="name" className="text-slate-700">
-              Correo *
+            <label htmlFor="phone" className="text-slate-700">
+              Teléfono *
             </label>
-            <input
-              type="email"
-              placeholder="correo electronico"
-              className="border-[2px] p-3 rounded-md text-black"
-            />
+            <div className="flex flex-row">
+              <input
+                type="text"
+                value="+54"
+                readOnly
+                className="border-[2px] border-r-0 p-3 rounded-l-md text-black bg-gray-100 w-16 text-center"
+              />
+              <input
+                type="tel"
+                id="phone"
+                placeholder="Teléfono celular"
+                className="border-[2px] p-3 rounded-r-md text-black flex-grow"
+              />
+            </div>
           </span>
         </form>
       </div>
