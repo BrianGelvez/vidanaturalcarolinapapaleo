@@ -7,7 +7,7 @@ export default function Form() {
       <div className="w-full flex flex-col gap-2">
         <p className="text-[22px] text-black font-semibold">Entrega</p>
         <div className="w-full  flex flex-row border-[2px] border-[#262E5D] rounded-md">
-          <span className="w-[12%] flex justify-center items-center bg-green-primary rounded-l-md">
+          <span className="w-[12%] flex justify-center items-center bg-green-primary">
             <IoIosCheckmarkCircleOutline size={24} />
           </span>
           <span className="w-[88%] flex flex-row justify-between gap-12 items-center rounded-r-md p-2 bg-white">
