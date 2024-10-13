@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-export default function Discount() {
+export default function Shipments() {
   return (
-    <div className="w-full h-auto">
+    <div className="w-full h-auto px-4">
       <div className="w-full">
         <Image
           src="/correoArgentinotransparente.webp"
@@ -11,9 +11,6 @@ export default function Discount() {
           alt="correoAgentino"
           className="w-full"
         />
-      </div>
-      <div>
-        <h1>asdasd</h1>
       </div>
     </div>
   );

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function RifiedPurchase() {
   return (
-    <div className="w-full flex flex-col bg-white">
+    <div className="w-full flex flex-col">
       <div className="w-full flex flex-col lg:flex-row-reverse justify-center items-center">
-        <div className="bg-[#AAC67B] lg:bg-white w-full flex flex-row justify-center items-center gap-3">
+        <div className="bg-[#AAC67B] lg:bg-[#f5f5f5] w-full flex flex-row justify-center items-center gap-3">
           <h1 className="text-black font-semibold text-[11px]">
             COMPRA SEGURA
           </h1>

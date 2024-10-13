@@ -8,11 +8,11 @@ export default function MenuProductPreview() {
               absolute left-0 w-full
               z-10 px-6
               max-h-0
-              peer-checked/menu:max-h-96 /* Mantiene el efecto desplegable */
+              peer-checked/menu:max-h-96
               transition-all duration-300 
               overflow-hidden
-              bg-white /* Aseguramos que el fondo sea visible */
-              shadow-lg /* Agregamos una sombra si lo deseas */
+              bg-[#f5f5f5] 
+              shadow-lg 
               rounded-5
               "
     >
