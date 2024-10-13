@@ -4,15 +4,17 @@ import Image from "next/image";
 export default function MenuProductPreview() {
   return (
     <div
-      className=" 
-              w-full max-h-0
-              rounded-5 
-              z-10
-              peer-checked/menu:
-              peer-checked/menu:max-h-96
+      className="
+              absolute left-0 w-full
+              z-10 px-6
+              max-h-0
+              peer-checked/menu:max-h-96 /* Mantiene el efecto desplegable */
               transition-all duration-300 
               overflow-hidden
-               "
+              bg-white /* Aseguramos que el fondo sea visible */
+              shadow-lg /* Agregamos una sombra si lo deseas */
+              rounded-5
+              "
     >
       <div className="w-full h-auto">
         <div className="w-full flex flex-row justify-between items-center py-4">
@@ -41,7 +43,7 @@ export default function MenuProductPreview() {
         </div>
         <div className="w-full flex flex-row justify-between items-center">
           <p className="text-black text-[22px]">Total</p>
-          <p className=" text-black">$39.900,00</p>
+          <p className="text-black">$39.900,00</p>
         </div>
       </div>
     </div>
