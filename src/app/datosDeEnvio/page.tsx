@@ -1,11 +1,12 @@
-import Header from "@/components/header";
-import SubmissionForm from "@/components/submissionForm";
+// import Header from "@/components/header";
+import ProductPreview from "./sections/productPreview"
+import RifiedPurchase from "./sections/rifiedPurchase"
 
 export default function DatosDeEnvio() {
     return (
-        <div>
-            <Header/>
-            <SubmissionForm/>
+        <div className="bg-white">
+            <RifiedPurchase/>
+            <ProductPreview/>
         </div>
     )
 }

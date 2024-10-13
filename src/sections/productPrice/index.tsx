@@ -3,15 +3,17 @@
 import Image from "next/image";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function ProductPrice() {
+  const router = useRouter();
   const [quantity, setQuantity] = useState(1);
 
   const increaseQuantity = () => setQuantity((prev) => prev + 1);
   const decreaseQuantity = () =>
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
-  // NO REPRESENTA PRINCIPIOS SOLID. ARREGLAR
+  // NO REPRESENTA PRINCIPIOS SOLID, MAL MANEJO DE ERRORES. ARREGLAR FUNCION
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Aquí puedes enviar la información al backend
@@ -35,6 +37,7 @@ export default function ProductPrice() {
       } else {
         // Manejar error
         console.error("Error al enviar la orden");
+        router.push("/datosDeEnvio");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -172,6 +175,7 @@ export default function ProductPrice() {
             />
             <Image src="/visa.png" width={50} height={50} alt="tarjetavisa" />
           </div>
+          <p className="text-black italic text-[12px]">* Todos los medios de pago</p>
         </div>
       </div>
     </div>
