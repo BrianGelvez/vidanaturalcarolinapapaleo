@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { TiMinus } from "react-icons/ti";
+import { FaPlus } from "react-icons/fa";
 
 export default function ProductPrice() {
   const router = useRouter();
@@ -83,15 +84,15 @@ export default function ProductPrice() {
           </div>
           <div className="py-4 flex flex-col gap-3">
             <div className="w-auto flex items-center gap-4 mb-4">
-              <div className="w-auto flex flex-row gap-4 items-center justify-center border-[1px] p-2 rounded-sm border-[#1d1d1d]/40">
+              <div className="w-auto flex flex-row gap-6 items-center justify-center border-[1px] p-2 px-4 rounded-md border-[#1d1d1d]/40">
                 <button
                   onClick={decreaseQuantity}
                   className="text-black"
                   aria-label="Disminuir cantidad"
                 >
-                  <Minus size={20} />
+                  <TiMinus size={20} className="text-xl"/>
                 </button>
-                <span className="text-2xl font-bold text-black">
+                <span className="text-2xl font-extralight text-black">
                   {quantity}
                 </span>
                 <button
@@ -99,7 +100,7 @@ export default function ProductPrice() {
                   className="text-black"
                   aria-label="Aumentar cantidad"
                 >
-                  <Plus size={20} />
+                  <FaPlus size={20} />
                 </button>
               </div>
             </div>
