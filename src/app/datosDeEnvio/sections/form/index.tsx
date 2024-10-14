@@ -1,11 +1,33 @@
 "use client";
 
+import { useState } from "react";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { TbCircleNumber1Filled } from "react-icons/tb";
-import { FormServer } from "@/components/server/formServer";
+import { TbCircleNumber1Filled, TbCircleNumber2Filled, TbCircleNumber3Filled } from "react-icons/tb";
 
 export default function Form() {
-  const { postalCode, city, handlePostalCodeChange } = FormServer(); // Usamos el hook para manejar la lógica
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    postalCode: "",
+    city: "",
+    street: "",
+    number: "",
+    department: "",
+    neighborhood: "",
+    dni: "",
+  });
+
+  // Maneja los cambios en los inputs
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Maneja el envío del formulario
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Datos enviados:", formData);
+  };
 
   return (
     <div className="w-full flex flex-col p-4 gap-4">
@@ -30,83 +52,156 @@ export default function Form() {
         </div>
       </div>
 
-      {/* Datos de contacto */}
-      <div className="w-full p-2 flex flex-row items-center gap-4 rounded-md bg-white">
-        <TbCircleNumber1Filled className="text-green-primary" size={36} />
-        <p className="text-black font-semibold">Datos de contacto</p>
-      </div>
+      {/* Formulario único */}
+      <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
+        {/* Datos de contacto */}
+        <div className="w-full p-2 flex flex-row items-center gap-4 rounded-md bg-white">
+          <TbCircleNumber1Filled className="text-green-primary" size={36} />
+          <p className="text-black font-semibold">Datos de contacto</p>
+        </div>
 
-      {/* Formulario */}
-      <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
-        <form className="flex flex-col gap-4" action="">
+        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
           {/* Nombre */}
-          <span className="w-full flex flex-col gap-2">
-            <label htmlFor="name" className="text-slate-700">Nombre *</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Nombre completo"
-              className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
-            />
-          </span>
+          <label htmlFor="name" className="text-black">Nombre *</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre completo"
+            value={formData.name}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+          />
 
           {/* Correo */}
-          <span className="w-full flex flex-col gap-2">
-            <label htmlFor="email" className="text-slate-700">Correo *</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Correo electrónico"
-              className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
-            />
-          </span>
+          <label htmlFor="email" className="text-black">Correo *</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            value={formData.email}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+          />
 
           {/* Teléfono */}
-          <span className="w-full flex flex-col gap-2">
-            <label htmlFor="phone" className="text-blue-900">Teléfono *</label>
-            <div className="flex flex-row">
-              <input
-                type="text"
-                value="+54"
-                readOnly
-                className="border-[2px] border-r-0 p-3 rounded-l-md text-black bg-gray-100 w-16 text-center"
-              />
-              <input
-                type="tel"
-                id="phone"
-                placeholder="Teléfono celular"
-                className="border-[2px] p-3 rounded-r-md text-black flex-grow focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
-              />
-            </div>
-          </span>
-
-          {/* Código Postal */}
-          <span className="w-full flex flex-col gap-2">
-            <label htmlFor="postal-code" className="text-slate-700">Código Postal *</label>
+          <label htmlFor="phone" className="text-black">Teléfono *</label>
+          <div className="flex flex-row">
             <input
               type="text"
-              id="postal-code"
-              value={postalCode}
-              onChange={handlePostalCodeChange}
-              placeholder="Código postal"
-              className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+              value="+54"
+              readOnly
+              className="border-[2px] border-r-0 p-3 rounded-l-md text-black bg-gray-100 w-16 text-center"
             />
-          </span>
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Teléfono celular"
+              value={formData.phone}
+              onChange={handleChange}
+              className="border-[2px] p-3 rounded-r-md text-black flex-grow focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+            />
+          </div>
+        </div>
+
+        {/* Datos del destinatario */}
+        <div className="w-full p-2 flex flex-row items-center gap-4 rounded-md bg-white">
+          <TbCircleNumber2Filled className="text-green-primary" size={36} />
+          <p className="text-black font-semibold">Datos del destinatario</p>
+        </div>
+
+        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
+          {/* Código Postal */}
+          <label htmlFor="postalCode" className="text-black">Código Postal *</label>
+          <input
+            type="text"
+            name="postalCode"
+            placeholder="Código postal"
+            value={formData.postalCode}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+          />
 
           {/* Ciudad */}
-          <span className="w-full flex flex-col gap-2">
-            <label htmlFor="city" className="text-slate-700">Ciudad</label>
-            <input
-              type="text"
-              id="city"
-              value={city}
-              readOnly
-              placeholder="Ciudad detectada"
-              className="border-[2px] p-3 rounded-md text-black bg-gray-100 focus:outline-none"
-            />
-          </span>
-        </form>
-      </div>
+          <label htmlFor="city" className="text-black">Ciudad</label>
+          <input
+            type="text"
+            name="city"
+            placeholder="Ciudad"
+            value={formData.city}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+          />
+
+          {/* Calle y número */}
+          <label htmlFor="street" className="text-black">Avenida/Calle *</label>
+          <input
+            type="text"
+            name="street"
+            placeholder="Avenida o calle"
+            value={formData.street}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+          />
+
+          <label htmlFor="number" className="text-black">Número *</label>
+          <input
+            type="text"
+            name="number"
+            placeholder="Número de casa"
+            value={formData.number}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+          />
+
+          {/* Departamento y barrio */}
+          <label htmlFor="department" className="text-black">Departamento (opcional)</label>
+          <input
+            type="text"
+            name="department"
+            placeholder="Departamento"
+            value={formData.department}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+          />
+
+          <label htmlFor="neighborhood" className="text-black">Barrio (opcional)</label>
+          <input
+            type="text"
+            name="neighborhood"
+            placeholder="Barrio"
+            value={formData.neighborhood}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+          />
+        </div>
+
+        {/* Datos de facturación */}
+        <div className="w-full p-2 flex flex-row items-center gap-4 rounded-md bg-white">
+          <TbCircleNumber3Filled className="text-green-primary" size={36} />
+          <p className="text-black font-semibold">Datos de facturación</p>
+        </div>
+
+        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
+          {/* DNI */}
+          <label htmlFor="dni" className="text-black">DNI *</label>
+          <input
+            type="text"
+            name="dni"
+            placeholder="Número de DNI"
+            value={formData.dni}
+            onChange={handleChange}
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+          />
+        </div>
+
+        {/* Botón de envío */}
+        <button
+          type="submit"
+          className="p-3 bg-green-primary text-white font-semibold rounded-md hover:bg-green-700"
+        >
+          Enviar datos
+        </button>
+      </form>
     </div>
   );
 }
