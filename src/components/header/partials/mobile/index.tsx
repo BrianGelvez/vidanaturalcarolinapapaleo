@@ -21,7 +21,7 @@ export default function Mobile() {
     <div
       className="w-full max-h-0 z-50 mt-5 peer-checked/menu:max-h-96
                     transition-all duration-300 overflow-hidden flex 
-                    flex-col items-center mr-[70px]"
+                    flex-col items-center mr-[px]"
     >
       {navItems.map((item) => (
         <ul
@@ -38,9 +38,7 @@ export default function Mobile() {
       ))}
 
       {/* Botón centrado */}
-      <button className="mt-6 py-2 px-8 rounded-md bg-black text-white">
-        Comprar
-      </button>
+<button onClick={() => handleScroll("#comprar")} className="py-2 px-8 rounded-md bg-black mt-6">Comprar</button>
     </div>
   );
 }
