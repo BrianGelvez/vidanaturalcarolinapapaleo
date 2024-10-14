@@ -12,7 +12,7 @@ export default function Home() {
   };
 
   return (
-    <div id="inicio" className="relative w-full h-screen lg:h-[740px]">
+    <div id="inicio" className="relative w-full h-screen lg:h-[650px]">
       <div className="hidden lg:block absolute bottom-[-20px] left-0 w-full h-[15vh] bg-white z-10" />
       <Image
         src="/FondoRedHome.webp"
@@ -32,10 +32,10 @@ export default function Home() {
 <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Contenedor para el contenido */}
-      <div className="absolute top-[190px] lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-24">
+      <div className="absolute lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-12">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-16">
           {/* <p className="text-[15px] font-light">100% Natural</p> */}
-          <h1 className="text-[40px] md:text-[60px] text-center lg:text-start text-white font-[700] leading-none">
+          <h1 className="text-[40px] md:text-[50px] text-center lg:text-start text-white font-[700] leading-none">
             SER VIDA <br />
             SER NATURALEZA <br />
             SER <span className="text-red-600">VITALIDAD</span>
@@ -59,7 +59,7 @@ export default function Home() {
             width={1000}
             height={1000}
             alt="Vitaly Plus"
-            className="mt-8 min0:w-[250px] min1:w-[330px] md:w-[360px] lg:w-[440px] z-30"
+            className="mt-8 min0:w-[250px] min1:w-[330px] md:w-[360px] z-30"
           />
         </div>
       </div>
