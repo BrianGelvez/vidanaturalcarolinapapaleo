@@ -51,7 +51,7 @@ export default function Form() {
           <p className="text-black font-semibold">Datos de contacto</p>
         </div>
 
-        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
+        <div className="w-full px-2 py-4 flex flex-col gap-2 rounded-md bg-white">
           {/* Nombre */}
           <label htmlFor="name" className="text-black">Nombre *</label>
           <input
@@ -100,7 +100,7 @@ export default function Form() {
           <p className="text-black font-semibold">Datos del destinatario</p>
         </div>
 
-        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
+        <div className="w-full px-2 py-4 flex flex-col gap-2 rounded-md bg-white">
           {/* Código Postal */}
           <label htmlFor="postalCode" className="text-black">Código Postal *</label>
           <input
