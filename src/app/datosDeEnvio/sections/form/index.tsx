@@ -2,19 +2,32 @@
 
 import { ChangeEvent, FormEvent, useState } from "react";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
-import { TbCircleNumber1Filled, TbCircleNumber2Filled, TbCircleNumber3Filled } from "react-icons/tb";
+import {
+  TbCircleNumber1Filled,
+  TbCircleNumber2Filled,
+  TbCircleNumber3Filled,
+} from "react-icons/tb";
+import { FormServer } from "@/components/server/formServer";
 import { FormData } from "./interface";
 
 export default function Form() {
+  const { postalCode, city, handlePostalCodeChange } = FormServer();
   const [formData, setFormData] = useState<Partial<FormData>>({});
+  const [isWithoutNumber, setIsWithoutNumber] = useState(false);
 
-  // Maneja los cambios en los inputs
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({ ...prevData, [name]: value }));
+    const { name, value, type, checked } = e.target;
+    if (type === "checkbox" && name === "withoutNumber") {
+      setIsWithoutNumber(checked);
+      setFormData((prevData) => ({
+        ...prevData,
+        number: checked ? "sin número" : "",
+      }));
+    } else {
+      setFormData((prevData) => ({ ...prevData, [name]: value }));
+    }
   };
 
-  // Maneja el envío del formulario
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Datos enviados:", formData);
@@ -51,9 +64,11 @@ export default function Form() {
           <p className="text-black font-semibold">Datos de contacto</p>
         </div>
 
-        <div className="w-full px-2 py-4 flex flex-col gap-2 rounded-md bg-white">
+        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
           {/* Nombre */}
-          <label htmlFor="name" className="text-black">Nombre *</label>
+          <label htmlFor="name" className="text-black">
+            Nombre *
+          </label>
           <input
             type="text"
             name="name"
@@ -64,7 +79,9 @@ export default function Form() {
           />
 
           {/* Correo */}
-          <label htmlFor="email" className="text-black">Correo *</label>
+          <label htmlFor="email" className="text-black mt-4">
+            Correo *
+          </label>
           <input
             type="email"
             name="email"
@@ -75,7 +92,9 @@ export default function Form() {
           />
 
           {/* Teléfono */}
-          <label htmlFor="phone" className="text-black">Teléfono *</label>
+          <label htmlFor="phone" className="text-black mt-4">
+            Teléfono *
+          </label>
           <div className="flex flex-row">
             <input
               type="text"
@@ -100,69 +119,105 @@ export default function Form() {
           <p className="text-black font-semibold">Datos del destinatario</p>
         </div>
 
-        <div className="w-full px-2 py-4 flex flex-col gap-2 rounded-md bg-white">
+        <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
           {/* Código Postal */}
-          <label htmlFor="postalCode" className="text-black">Código Postal *</label>
+          <label htmlFor="postalCode" className="text-black">
+            Código Postal *
+          </label>
           <input
             type="text"
             name="postalCode"
             placeholder="Código postal"
-            value={formData.postalCode || ""}
-            onChange={handleChange}
+            value={postalCode}
+            onChange={handlePostalCodeChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
 
           {/* Ciudad */}
-          <label htmlFor="city" className="text-black">Ciudad</label>
+          <label htmlFor="city" className="text-black mt-4">
+            Ciudad
+          </label>
           <input
             type="text"
             name="city"
             placeholder="Ciudad"
-            value={formData.city || ""}
-            onChange={handleChange}
-            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+            value={city}
+            readOnly
+            className="border-[2px] p-3 rounded-md text-black bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
 
-          {/* Calle y número */}
-          <label htmlFor="street" className="text-black">Avenida/Calle *</label>
-          <input
-            type="text"
-            name="street"
-            placeholder="Avenida o calle"
-            value={formData.street || ""}
-            onChange={handleChange}
-            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
-          />
+          {/* Calle */}
+          <div className="flex-grow mb-4 lg:mb-0">
+            <label htmlFor="street" className="text-black">
+              Calle *
+            </label>
+            <input
+              type="text"
+              name="street"
+              placeholder="Avenida o calle"
+              value={formData.street || ""}
+              onChange={handleChange}
+              className="w-full border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+            />
+          </div>
 
-          <label htmlFor="number" className="text-black">Número *</label>
-          <input
-            type="text"
-            name="number"
-            placeholder="Número de casa"
-            value={formData.number || ""}
-            onChange={handleChange}
-            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
-          />
+          {/* Calle, Número y Departamento */}
+          <div className="lg:flex lg:space-x-4 mt-4">
+            {/* Número */}
+            <div className="flex-grow mb-4 lg:mb-0">
+              <label htmlFor="number" className="text-black">
+                Número *
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="number"
+                  placeholder="Número de casa"
+                  value={isWithoutNumber ? "Sin número" : formData.number || ""}
+                  onChange={handleChange}
+                  disabled={isWithoutNumber}
+                  className="w-full border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+                />
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+                  <input
+                    type="checkbox"
+                    name="withoutNumber"
+                    checked={isWithoutNumber}
+                    onChange={handleChange}
+                    className="mr-2"
+                  />
+                  <span className="text-sm text-gray-500">Sin número</span>
+                </div>
+              </div>
+            </div>
 
-          {/* Departamento y barrio */}
-          <label htmlFor="department" className="text-black">Departamento (opcional)</label>
-          <input
-            type="text"
-            name="department"
-            placeholder="Departamento"
-            value={formData.department || ""}
-            onChange={handleChange}
-            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
-          />
+            {/* Departamento */}
+            <div className="flex-grow">
+              <label htmlFor="department" className="text-black">
+                Departamento (opcional)
+              </label>
+              <input
+                type="text"
+                name="department"
+                placeholder="Departamento"
+                value={formData.department || ""}
+                onChange={handleChange}
+                className="w-full border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
+              />
+            </div>
+          </div>
 
-          <label htmlFor="neighborhood" className="text-black">Barrio (opcional)</label>
+          {/* Barrio */}
+          <label htmlFor="neighborhood" className="text-black mt-4">
+            Barrio (opcional)
+          </label>
           <input
             type="text"
             name="neighborhood"
             placeholder="Barrio"
             value={formData.neighborhood || ""}
             onChange={handleChange}
-            className="border-[2px] p-3 rounded-md text-black focus:outline-none"
+            className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
         </div>
 
@@ -174,7 +229,9 @@ export default function Form() {
 
         <div className="w-full px-2 py-4 flex flex-col rounded-md bg-white">
           {/* DNI */}
-          <label htmlFor="dni" className="text-black">DNI *</label>
+          <label htmlFor="dni" className="text-black">
+            DNI *
+          </label>
           <input
             type="text"
             name="dni"
