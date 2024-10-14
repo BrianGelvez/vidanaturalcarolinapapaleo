@@ -16,6 +16,7 @@ export default function MenuProductPreview() {
               rounded-5
               "
     >
+      
       <div className="w-full h-auto">
         <div className="w-full flex flex-row justify-between items-center py-4">
           <span className="w-[70%] flex flex-row justify-start items-center gap-3">
