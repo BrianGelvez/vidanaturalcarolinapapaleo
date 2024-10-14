@@ -6,18 +6,7 @@ import { TbCircleNumber1Filled, TbCircleNumber2Filled, TbCircleNumber3Filled } f
 import { FormData } from "./interface";
 
 export default function Form() {
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    email: "",
-    phone: "",
-    postalCode: "",
-    city: "",
-    street: "",
-    number: "",
-    department: "",
-    neighborhood: "",
-    dni: "",
-  });
+  const [formData, setFormData] = useState<Partial<FormData>>({});
 
   // Maneja los cambios en los inputs
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -69,7 +58,7 @@ export default function Form() {
             type="text"
             name="name"
             placeholder="Nombre completo"
-            value={formData.name}
+            value={formData.name || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
@@ -80,7 +69,7 @@ export default function Form() {
             type="email"
             name="email"
             placeholder="Correo electrónico"
-            value={formData.email}
+            value={formData.email || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
@@ -98,7 +87,7 @@ export default function Form() {
               type="tel"
               name="phone"
               placeholder="Teléfono celular"
-              value={formData.phone}
+              value={formData.phone || ""}
               onChange={handleChange}
               className="border-[2px] p-3 rounded-r-md text-black flex-grow focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
             />
@@ -118,7 +107,7 @@ export default function Form() {
             type="text"
             name="postalCode"
             placeholder="Código postal"
-            value={formData.postalCode}
+            value={formData.postalCode || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
@@ -129,7 +118,7 @@ export default function Form() {
             type="text"
             name="city"
             placeholder="Ciudad"
-            value={formData.city}
+            value={formData.city || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none"
           />
@@ -140,7 +129,7 @@ export default function Form() {
             type="text"
             name="street"
             placeholder="Avenida o calle"
-            value={formData.street}
+            value={formData.street || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none"
           />
@@ -150,7 +139,7 @@ export default function Form() {
             type="text"
             name="number"
             placeholder="Número de casa"
-            value={formData.number}
+            value={formData.number || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none"
           />
@@ -161,7 +150,7 @@ export default function Form() {
             type="text"
             name="department"
             placeholder="Departamento"
-            value={formData.department}
+            value={formData.department || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none"
           />
@@ -171,7 +160,7 @@ export default function Form() {
             type="text"
             name="neighborhood"
             placeholder="Barrio"
-            value={formData.neighborhood}
+            value={formData.neighborhood || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none"
           />
@@ -190,7 +179,7 @@ export default function Form() {
             type="text"
             name="dni"
             placeholder="Número de DNI"
-            value={formData.dni}
+            value={formData.dni || ""}
             onChange={handleChange}
             className="border-[2px] p-3 rounded-md text-black focus:outline-none focus:ring-2 focus:ring-blue-900 focus:border-transparent"
           />
