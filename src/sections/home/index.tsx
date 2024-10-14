@@ -12,8 +12,8 @@ export default function Home() {
   };
 
   return (
-    <div id="inicio" className="relative w-full h-screen lg:h-[650px]">
-      <div className="hidden lg:block absolute bottom-[-20px] left-0 w-full h-[15vh] bg-white z-10" />
+    <div id="inicio" className="relative w-full h-screen lg:h-[600px]">
+      <div className="hidden lg:block absolute bottom-0 w-full h-[15vh] bg-white z-10" />
       <Image
         src="/FondoRedHome.webp"
         layout="fill"
@@ -32,10 +32,10 @@ export default function Home() {
 <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Contenedor para el contenido */}
-      <div className="absolute lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-12">
+      <div className="absolute lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-8">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-16">
           {/* <p className="text-[15px] font-light">100% Natural</p> */}
-          <h1 className="text-[40px] md:text-[50px] text-center lg:text-start text-white font-[700] leading-none">
+          <h1 className="text-[40px] md:text-[45px] text-center lg:text-start text-white font-[700] leading-none">
             SER VIDA <br />
             SER NATURALEZA <br />
             SER <span className="text-red-600">VITALIDAD</span>
@@ -44,7 +44,7 @@ export default function Home() {
           <div className="w-full flex flex-col py-3 justify-center items-center lg:items-start gap-2">
             <button 
             onClick={() => handleScroll("#vitalyplus")}
-             className="bg-[#484848]/60 backdrop-blur-sm lg:w-[262px] p-4 md:text-[18px] font-semibold rounded-sm">
+             className="bg-[#484848]/60 backdrop-blur-sm lg:w-[200px] p-4 md:text-[16px] font-semibold rounded-sm">
               Descubri la magia
             </button>
             {/* <p className="text-[10px] md:text-[12px] lg:text-[14px] py-1 text-[#8b8b8b]">
@@ -59,7 +59,7 @@ export default function Home() {
             width={1000}
             height={1000}
             alt="Vitaly Plus"
-            className="mt-8 min0:w-[250px] min1:w-[330px] md:w-[360px] z-30"
+            className="mt-8 min0:w-[250px] min1:w-[330px] md:w-[300px] z-30"
           />
         </div>
       </div>
