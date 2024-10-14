@@ -21,7 +21,7 @@ export default function Mobile() {
     <div
       className="w-full max-h-0 z-50 mt-5 peer-checked/menu:max-h-96
                     transition-all duration-300 overflow-hidden flex 
-                    flex-col items-center mr-[px]"
+                    flex-col items-center mr-[60px]"
     >
       {navItems.map((item) => (
         <ul
