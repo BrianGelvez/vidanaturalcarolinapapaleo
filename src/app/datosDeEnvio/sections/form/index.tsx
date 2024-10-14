@@ -34,7 +34,7 @@ export default function Form() {
   };
 
   return (
-    <div className="w-full flex flex-col p-4 gap-4">
+    <div className="w-full lg flex flex-col p-4 gap-4 lg:w-[85%] xl:w-[77%] 2xl:w-[74%]">
       {/* Entrega */}
       <div className="w-full flex flex-col gap-2">
         <p className="text-[22px] text-black font-semibold">Entrega</p>
