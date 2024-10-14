@@ -19,7 +19,7 @@ export default function Desktop() {
 
   return (
     <div className="hidden lg:flex">
-      <ul className="flex items-center space-x-12 lg:mt-2">
+      <ul className="flex items-center space-x-12">
         {navItems.map((item) => (
           <li
             key={item.id}

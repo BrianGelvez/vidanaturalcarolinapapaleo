@@ -25,8 +25,8 @@ export default function Header() {
     <div
       className={`fixed top-0 left-0 w-full backdrop-blur-md bg-red-600 shadow-md z-50`}
     >
-      <div className="relative w-full flex flex-row justify-between items-start py-6 px-4 lg:px-10 xl:px-16 2xl:px-48">
-        <span className="cursor-pointer mt-1 lg:mt-2">
+      <div className="relative w-full flex flex-row justify-between items-start py-4 px-4 lg:px-10 xl:px-16 2xl:px-48">
+        <span className="cursor-pointer mt-1">
           <Link href="/">
             <Image
               width={180}
