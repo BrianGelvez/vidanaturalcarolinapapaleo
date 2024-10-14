@@ -13,6 +13,7 @@ export default function Home() {
 
   return (
     <div id="inicio" className="relative w-full h-screen lg:h-[800px]">
+      <div className="absolute bottom-[-20px] left-0 w-full h-[15vh] bg-white z-10" />
       <Image
         src="/FondoRedHome.webp"
         layout="fill"
@@ -32,9 +33,9 @@ export default function Home() {
 
       {/* Contenedor para el contenido */}
       <div className="absolute top-[190px] lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-16 lg:justify-center lg:items-start lg:pt-48">
-        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-20">
-          <p className="text-[15px] font-light">100% Natural</p>
-          <h1 className="text-[40px] md:text-[45px] text-center lg:text-start text-white font-[1000] leading-tight">
+        <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-16">
+          {/* <p className="text-[15px] font-light">100% Natural</p> */}
+          <h1 className="text-[40px] md:text-[50px] text-center lg:text-start text-white font-[1000] leading-none">
             SER VIDA <br />
             SER NATURALEZA <br />
             SER <span className="text-red-600">VITALIDAD</span>
@@ -42,9 +43,9 @@ export default function Home() {
 
           <div className="w-full flex flex-col py-6 justify-center items-center lg:items-start gap-2">
             <button 
-            onClick={() => handleScroll("#comprar")}
+            onClick={() => handleScroll("#vitalyplus")}
              className="bg-[#484848]/60 backdrop-blur-sm lg:w-[262px] p-4 md:text-[18px] font-semibold rounded-sm">
-              Comprar Ahora
+              Descubri la magia
             </button>
             {/* <p className="text-[10px] md:text-[12px] lg:text-[14px] py-1 text-[#8b8b8b]">
               20% de descuento usando este botón
@@ -58,14 +59,13 @@ export default function Home() {
             width={300}
             height={300}
             alt="Vitaly Plus"
-            className="mt-8 min0:w-[250px] min1:w-[300px] md:w-[340px]"
+            className="mt-8 min0:w-[250px] min1:w-[300px] md:w-[340px] z-30"
           />
         </div>
       </div>
 
       {/* Banner de Envío Gratis */}
-      <div className="absolute top-[110px] left-0 w-full h-auto p-2 backdrop-blur-md bg-white/20 flex flex-col justify-center items-center italic">
-        {/* <p className="text-slate-200 underline">Ventas por mayor y menor</p> */}
+      {/* <div className="absolute top-[110px] left-0 w-full h-auto p-2 backdrop-blur-md bg-white/20 flex flex-col justify-center items-center italic">
         <p className="text-white text-xl lg:text-2xl xl:text-3xl">
           📦Envio{" "}
           <span className="text-brown-secundary font-semibold text-red-600">
@@ -73,7 +73,7 @@ export default function Home() {
           </span>{" "}
           a todo el pais!📦
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
