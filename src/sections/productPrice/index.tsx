@@ -64,10 +64,10 @@ export default function ProductPrice() {
           />
         </div>
         <div className="w-full flex flex-col gap-3 justify-start items-start">
-          <p className="text-red-600 text-[40px] md:text-[45px] leading-tight font-[800] text-start">
+          <p className="text-red-600 text-[40px] md:text-[45px] leading-tight font-[600] text-start">
             Proba cambiar tu vida hoy
           </p>
-          <p className="text-black font-bold text-[20px] md:text-[22px] text-start ">
+          <p className="text-black font-[300] text-[20px] md:text-[22px] text-start ">
             El mejor cambio de tu vida, al mejor precio de tu vida.
           </p>
           <div className="w-full flex flex-row gap-12 justify-start items-start">
@@ -107,7 +107,7 @@ export default function ProductPrice() {
             <form onSubmit={handleSubmit}>
               <button
                 type="submit"
-                className="bg-[#484848]/60 text-center backdrop-blur-sm w-[180px] md:w-[200px] lg:w-[230px] p-4 md:text-[20px] lg:text-[22px] font-semibold rounded-sm"
+                className="bg-[#CE0000] text-center backdrop-blur-sm w-[180px] md:w-[200px] lg:w-[230px] p-4 md:text-[20px] lg:text-[22px] font-semibold rounded-sm"
               >
                 Comprar Ahora
               </button>

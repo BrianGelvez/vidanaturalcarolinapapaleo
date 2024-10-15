@@ -8,11 +8,12 @@ export default function Testimonies() {
                     py-24 px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
     >
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="w-full flex flex-col gap-12 justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center">
           <h2 className="text-white text-[40px] md:text-[45px] font-[800] text-center leading-tight">
-            Personas que <span className="text-red-600">mejoraron</span> su
+            Personas que <span className="text-red-600">mejoraron</span><br/> su
             calidad de vida
           </h2>
+          <p className="text-[18px] font-[200] p-3">Lleva el mejor estilo de vida saludable con nuestro suplemento</p>
           <div
             className="w-full flex flex-row overflow-x-auto gap-4 lg:gap-12 justify-start
                          md:justify-center items-center lg:justify-start 2xl:justify-center py-8"
