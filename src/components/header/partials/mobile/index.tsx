@@ -38,7 +38,7 @@ export default function Mobile() {
       ))}
 
       {/* Botón centrado */}
-<button onClick={() => handleScroll("#comprar")} className="py-2 px-8 rounded-md bg-black mt-6">Comprar</button>
+<button onClick={() => handleScroll("#comprar")} className="py-3 px-10 rounded-sm bg-black mt-6">Comprar</button>
     </div>
   );
 }

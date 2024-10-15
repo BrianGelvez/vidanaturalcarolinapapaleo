@@ -1,9 +1,8 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 
 export default function Home() {
-
   const handleScroll = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
@@ -29,23 +28,23 @@ export default function Home() {
         className="flex lg:hidden"
       />
 
-<div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Contenedor para el contenido */}
-      <div className="absolute top-[190px] lg:top-14 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-24">
+      <div className="absolute top-[190px] lg:top-5 w-full flex flex-col lg:flex-row-reverse lg:gap-6 lg:justify-center lg:items-start lg:pt-24">
         <div className="lg:w-1/2 flex flex-col justify-center items-center lg:items-start lg:mt-16">
           {/* <p className="text-[15px] font-light">100% Natural</p> */}
           <h1 className="text-[40px] md:text-[55px] text-center lg:text-start text-white font-[700] leading-[0.9] tracking-[-0.5px]">
-  SER VIDA <br />
-  SER NATURALEZA <br />
-  SER <span className="text-red-600">VITALIDAD</span>
-</h1>
-
+            SER VIDA <br />
+            SER NATURALEZA <br />
+            SER <span className="text-red-600">VITALIDAD</span>
+          </h1>
 
           <div className="w-full flex flex-col py-4 justify-center items-center lg:items-start gap-2">
-            <button 
-            onClick={() => handleScroll("#vitalyplus")}
-             className="bg-[#484848]/60 backdrop-blur-sm lg:w-[262px] p-3 md:text-[18px] font-semibold rounded-sm">
+            <button
+              onClick={() => handleScroll("#vitalyplus")}
+              className="bg-[#484848]/60 backdrop-blur-sm lg:w-[262px] p-3 md:text-[18px] font-semibold rounded-sm"
+            >
               Descubri la magia
             </button>
             {/* <p className="text-[10px] md:text-[12px] lg:text-[14px] py-1 text-[#8b8b8b]">
