@@ -18,9 +18,9 @@ export default function FourSteps() {
             <Image
               src="/carolinaPapaleo2.webp"
               alt="Carolina Papaleo"
-              width={450}
-              height={450}
-              className="rounded-lg shadow-lg object-cover lg:w-[800px]"
+              width={1000}
+              height={1000}
+              className="rounded-lg shadow-lg object-cover lg:w-[700px]"
             />
             {/* <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
             <div className="absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />

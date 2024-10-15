@@ -12,7 +12,7 @@ export default function Home() {
   };
 
   return (
-    <div id="inicio" className="relative w-full h-screen lg:h-[52vh]">
+    <div id="inicio" className="relative w-full h-screen lg:h-[720px]">
       <div className="hidden lg:block absolute bottom-0 left-0 w-full h-[12vh] bg-white z-10" />
       <Image
         src="/FondoRedHome.webp"

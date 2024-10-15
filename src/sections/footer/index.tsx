@@ -21,7 +21,7 @@ export default function Footer() {
             Enviar
           </button>
         </div>
-        <div className="mt-8 text-xs w-full flex flex-col justify-center items-center opacity-80">
+        <div className="mt-8 text-xs w-full flex flex-col justify-center items-center opacity-80 bg-red-500">
           <p>Copyright © 2024. All rights reserved.</p>
           <Image
             src="/LogoVidaNaturalBlanco.webp"

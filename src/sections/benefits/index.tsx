@@ -82,8 +82,8 @@ export default function Benefits() {
         <p className="pb-4 text-[17px]">For digestive health and support</p>
         <Image
           src="/adultoSaludable.webp"
-          width={400}
-          height={400}
+          width={200}
+          height={200}
           alt="icono saludable"
           className="w-full rounded-sm"
         />
