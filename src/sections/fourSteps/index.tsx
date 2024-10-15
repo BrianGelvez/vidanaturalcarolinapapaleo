@@ -7,7 +7,7 @@ export default function FourSteps() {
       className="relative w-full h-auto bg-white px-4 md:px-8 lg:px-10 xl:px-16 2xl:px-48"
     >
       <div className="w-full flex flex-col justify-center items-center">
-        <div className="bg-red-500 w-full block lg:hidden">
+        <div className="pt-24 w-full block lg:hidden">
           <h3 className="text-red-600 text-[40px] md:text-[55px] leading-tight font-[700] text-center">
             Cambia tu vida
           </h3>
