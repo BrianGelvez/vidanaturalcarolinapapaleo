@@ -13,7 +13,7 @@ export default function Testimonies() {
             Personas que <span className="text-red-600">mejoraron</span><br/> su
             calidad de vida
           </h2>
-          <p className="text-[18px] font-[200] p-3">Lleva el mejor estilo de vida saludable con nuestro suplemento</p>
+          <p className="text-[18px] font-[200] p-3 text-center">Lleva el mejor estilo de vida saludable con nuestro suplemento</p>
           <div
             className="w-full flex flex-row overflow-x-auto gap-4 lg:gap-12 justify-start
                          md:justify-center items-center lg:justify-start 2xl:justify-center py-8"

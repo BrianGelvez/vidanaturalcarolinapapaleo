@@ -9,6 +9,7 @@ import Product from "@/sections/product";
 import ProductPrice from "@/sections/productPrice";
 import Testimonies from "@/sections/testimonies";
 
+
 export default function Main() {
   return (
     <div>
