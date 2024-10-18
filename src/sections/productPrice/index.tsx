@@ -2,11 +2,17 @@
 
 import { Product, ProductResponse } from "@/interfaces/vitalyPlus";
 import Image from "next/image";
-// import { ProductResponse } from "./server/interface";
 import { useEffect, useState } from "react";
 
 export default function ProductPrice() {
   const [product, setProduct] = useState<Product | null>(null);
+
+  const formattedPrice = new Intl.NumberFormat("es-AR", {
+    style: "currency",
+    currency: "ARS",
+    minimumFractionDigits: 0, // Eliminar decimales
+    maximumFractionDigits: 0, // Eliminar decimales
+  }).format(product?.price || 0);
 
   function getProductVitaly() {
     fetch("/api/getVitaly", {
@@ -42,8 +48,12 @@ export default function ProductPrice() {
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center">
         <div className="w-full flex flex-col justify-center items-center gap-4 ">
-          <p className="text-[#272727] text-[40px] md:text-[45px] font-[800]">
-            {product?.description}
+          <p className="text-[#272727] text-[40px] md:text-[45px] font-[800] text-center leading-none">
+            {product?.description.split("s")[0]}s✨
+            <br />
+            <span className="text-[14px] hidden">
+              {product?.description.split("s")[1]}
+            </span>
           </p>
           <Image src="/VitalyPlus.webp" width={300} height={300} alt="vytali" />
         </div>
@@ -63,11 +73,18 @@ export default function ProductPrice() {
             </div>
             <div className="w-auto flex flex-col justify-start items-start">
               <p className="font-[800] text-[30px] text-red-600">
-                {product?.price}
+                {formattedPrice}
               </p>
               <p className="text-red-600">Ahora</p>
             </div>
           </div>
+          <a
+            href="/datosDeEnvio"
+            className="bg-red-600/80 hover:bg-red-800/90 backdrop-blur-md p-4 md:text-[20px] font-semibold rounded-sm transition-all duration-300 ease-in-out transform hover:shadow-lg"
+          >
+            Comprar Ahora
+          </a>
+
           <div className="py-4 flex flex-col gap-3">
             <p className="text-[#2e2e2e] font-[500] text-[20px] italic">
               * Envio gratis a todo el pais por correo Argentino

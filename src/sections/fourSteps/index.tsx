@@ -19,13 +19,12 @@ export default function FourSteps() {
         <div className="w-full flex flex-col lg:flex-row">
           <div className="lg:w-[40%] relative mt-6 flex justify-center">
             <Image
-              src="/carolinaPapaleo2.webp"
+              src="/carolinaPapaleo3.webp"
               alt="Carolina Papaleo"
               width={1000}
               height={1000}
               className="rounded-lg shadow-lg object-cover lg:w-[900px]"
             />
-            <div className="lg:hidden block absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
             <div className="lg:hidden block absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
             <div className="lg:hidden block absolute bottom-0 left-0 w-full h-[20%] bg-gradient-to-t from-white to-transparent" />
           </div>
