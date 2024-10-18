@@ -46,7 +46,7 @@ export default function Header() {
         backdropFilter: `blur(${8 * (1 - scrollProgress)}px)`,
       }}
     >
-      <div className="relative w-full flex flex-row justify-between items-center py-4 px-4 lg:px-10 xl:px-16 2xl:px-48">
+      <div className="relative w-full flex flex-row justify-between items-start lg:items-center py-4 px-4 lg:px-10 xl:px-16 2xl:px-48">
         <span className="cursor-pointer mt-1 lg:mt-0">
           <Link href="/">
             <Image
