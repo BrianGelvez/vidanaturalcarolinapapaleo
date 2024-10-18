@@ -30,7 +30,12 @@ export default function Desktop() {
             <span>{item.text}</span>
           </li>
         ))}
-        <button onClick={() => handleScroll("#comprar")} className="py-3 px-10 rounded-sm bg-black">Comprar</button>
+        <button
+          onClick={() => handleScroll("#comprar")}
+          className="py-1 px-6 bg-white text-red-600 rounded-2xl"
+        >
+          Comprar
+        </button>
       </ul>
     </div>
   );

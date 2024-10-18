@@ -1,32 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Mobile from "./partials/mobile";
 import classNames from "classnames";
 import Desktop from "./partials/desktop";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Importamos usePathname para obtener la ruta actual
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [opened, setOpened] = useState(false);
-  const pathname = usePathname(); // Obtenemos la ruta actual
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const pathname = usePathname();
 
   const handleToggle = () => {
     setOpened(!opened);
   };
 
   const handleGoBack = () => {
-    // Redirigimos al usuario a la página principal
     window.location.href = "/";
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
+      const maxScroll = fullHeight - windowHeight;
+      
+      const progress = Math.min(scrollPosition / (maxScroll * 0.5), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const backgroundColor = `rgba(134, 6, 6, ${scrollProgress})`;
+
   return (
     <div
-      className={`fixed top-0 left-0 w-full backdrop-blur-md bg-red-600 shadow-md z-50`}
+      className={`fixed top-0 left-0 w-full shadow-md z-50 transition-colors duration-300 ease-in-out`}
+      style={{
+        backgroundColor,
+        backdropFilter: `blur(${8 * (1 - scrollProgress)}px)`,
+      }}
     >
-      <div className="relative w-full flex flex-row justify-between items-start py-4 px-4 lg:px-10 xl:px-16 2xl:px-48">
-        <span className="cursor-pointer mt-1">
+      <div className="relative w-full flex flex-row justify-between items-start py-6 px-4 lg:px-10 xl:px-16 2xl:px-48">
+        <span className="cursor-pointer">
           <Link href="/">
             <Image
               width={180}
@@ -38,7 +59,6 @@ export default function Header() {
         </span>
 
         <div className="w-full flex flex-col justify-center items-end">
-          {/* Si la ruta es "/datosDeEnvio", mostramos solo el botón "Volver" */}
           {pathname === "/datosDeEnvio" ? (
             <button
               onClick={handleGoBack}
@@ -48,7 +68,6 @@ export default function Header() {
             </button>
           ) : (
             <>
-              {/* Menu Mobile */}
               <div className="w-full flex flex-col items-end lg:hidden">
                 <label
                   htmlFor="menu"
@@ -77,7 +96,6 @@ export default function Header() {
                 <Mobile />
               </div>
 
-              {/* Menu Desktop */}
               <div className="hidden lg:flex">
                 <Desktop />
               </div>
