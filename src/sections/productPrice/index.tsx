@@ -1,27 +1,16 @@
 "use client";
 
+import { Product, ProductResponse } from "@/interfaces/vitalyPlus";
 import Image from "next/image";
 // import { ProductResponse } from "./server/interface";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function ProductPrice() {
-  const appId = process.env.NEXT_PUBLIC_X_APP_ID;
-  const appKey = process.env.NEXT_PUBLIC_X_APP_KEY;
+  const [product, setProduct] = useState<Product | null>(null);
 
-  console.log("App ID:", appId);
-  console.log("App Key:", appKey);
-  console.log(
-    "NEXT_PUBLIC_APP_API_URL:",
-    `${process.env.NEXT_PUBLIC_APP_API_URL}`
-  );
-
-  useEffect(() => {
-    getPoductVitaly();
-  }, []);
-
-  function getPoductVitaly() {
-    fetch('/api/getVitaly', {
-      method: 'GET',
+  function getProductVitaly() {
+    fetch("/api/getVitaly", {
+      method: "GET",
     })
       .then((response) => {
         if (!response.ok) {
@@ -31,13 +20,20 @@ export default function ProductPrice() {
         }
         return response.json();
       })
-      .then((data) => {
+      .then((data: ProductResponse) => {
         console.log("Resultado:", data);
+        if (data.status === "ok" && data.products.length > 0) {
+          setProduct(data.products[0]);
+        }
       })
       .catch((error) => {
         console.error("Error al hacer la solicitud:", error);
       });
   }
+
+  useEffect(() => {
+    getProductVitaly();
+  }, []);
 
   return (
     <div
@@ -47,7 +43,7 @@ export default function ProductPrice() {
       <div className="w-full flex flex-col md:flex-row justify-center items-center">
         <div className="w-full flex flex-col justify-center items-center gap-4 ">
           <p className="text-[#272727] text-[40px] md:text-[45px] font-[800]">
-            Vitaly Plus✨
+            {product?.description}
           </p>
           <Image src="/VitalyPlus.webp" width={300} height={300} alt="vytali" />
         </div>
@@ -61,12 +57,14 @@ export default function ProductPrice() {
           <div className="w-full flex flex-row gap-12 justify-start items-start">
             <div className="w-auto flex flex-col justify-start items-start">
               <p className="text-black font-[800] text-[30px] line-through">
-                $49.900
+                $55.900
               </p>
               <p className="text-black">Antes</p>
             </div>
             <div className="w-auto flex flex-col justify-start items-start">
-              <p className="font-[800] text-[30px] text-red-600">$49.000</p>
+              <p className="font-[800] text-[30px] text-red-600">
+                {product?.price}
+              </p>
               <p className="text-red-600">Ahora</p>
             </div>
           </div>
