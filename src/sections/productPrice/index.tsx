@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ProductResponse } from "./server/interface";
+// import { ProductResponse } from "./server/interface";
 import { useEffect } from "react";
 
 export default function ProductPrice() {
@@ -19,35 +19,24 @@ export default function ProductPrice() {
     getPoductVitaly();
   }, []);
 
-  async function getPoductVitaly() {
-    if (!appId || !appKey) {
-      throw new Error("Variables de entorno no definidas.");
-    }
-
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_APP_API_URL}`, {
-        method: "GET",
-        cache: "default",
-        headers: {
-          // "Content-Type": "application/json",
-          "x-app-id": appId,
-          "x-app-key": appKey,
-        },
+  function getPoductVitaly() {
+    fetch('/api/getVitaly', {
+      method: 'GET',
+    })
+      .then((response) => {
+        if (!response.ok) {
+          return response.text().then((text) => {
+            throw new Error(`Error en la respuesta de la API: ${text}`);
+          });
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Resultado:", data);
+      })
+      .catch((error) => {
+        console.error("Error al hacer la solicitud:", error);
       });
-      console.log("response", response);
-
-      if (!response.ok) {
-        const errorDetails = await response.text();
-        throw new Error(`Error en la respuesta de la API: ${errorDetails}`);
-      }
-
-      const result: ProductResponse = await response.json();
-      console.log("Resultadooooo", result);
-
-      return result;
-    } catch (error) {
-      console.error("Error al hacer la solicitud:", error);
-    }
   }
 
   return (
