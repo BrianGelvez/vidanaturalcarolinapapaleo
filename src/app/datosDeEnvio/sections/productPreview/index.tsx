@@ -12,7 +12,7 @@ export default function ProductPreview() {
   };
 
   return (
-    <div className="w-full p-4 relative">
+    <div className="w-full p-4 relative lg:hidden">
       <label className="cursor-pointer" htmlFor="menu" onClick={handleToggle}>
         <div className="w-full h-auto flex flex-row justify-between items-center py-3 border-t-2 border-b-2">
           <span className="w-full flex flex-row gap-2">
@@ -37,7 +37,7 @@ export default function ProductPreview() {
         type="checkbox"
         className="peer/menu hidden"
       />
-      <MenuProductPreview />
+      <MenuProductPreview/>
     </div>
   );
 }
