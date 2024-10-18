@@ -47,11 +47,11 @@ export default function Header() {
       }}
     >
       <div className="relative w-full flex flex-row justify-between items-start py-6 px-4 lg:px-10 xl:px-16 2xl:px-48">
-        <span className="cursor-pointer">
+        <span className="cursor-pointer mt-1 lg:mt-0">
           <Link href="/">
             <Image
-              width={180}
-              height={180}
+              width={220}
+              height={220}
               src="/LogoVidaNaturalBlanco.webp"
               alt="Logo de Diego Bustos, abogado penalista"
             />
