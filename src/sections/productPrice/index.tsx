@@ -19,7 +19,6 @@ export default function ProductPrice() {
     getPoductVitaly();
   }, []);
 
-  
   async function getPoductVitaly() {
     if (!appId || !appKey) {
       throw new Error("Variables de entorno no definidas.");
