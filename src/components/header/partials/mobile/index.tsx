@@ -30,7 +30,7 @@ export default function Mobile() {
         >
           <li
             onClick={() => handleScroll(item.idLink)}
-            className="text-slate-50 hover:text-slate-300 font-extralight cursor-pointer"
+            className="text-white hover:font-semibold transition-all duration-200 ease-in-out cursor-pointer"
           >
             {item.text}
           </li>
@@ -38,7 +38,12 @@ export default function Mobile() {
       ))}
 
       {/* Botón centrado */}
-<button onClick={() => handleScroll("#comprar")} className="py-3 px-10 rounded-sm bg-black mt-6">Comprar</button>
+      <button
+        onClick={() => handleScroll("#comprar")}
+        className="py-1 px-6 bg-white text-red-600 rounded-2xl transition-all duration-200 ease-in-out hover:bg-red-600 hover:text-white hover:font-semibold mt-6"
+      >
+        Comprar ahora
+      </button>
     </div>
   );
 }

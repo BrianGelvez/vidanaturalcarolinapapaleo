@@ -24,7 +24,7 @@ export default function Desktop() {
           <li
             key={item.id}
             onClick={() => handleScroll(item.idLink)}
-            className="text-slate-200 hover:text-slate-400 font-extralight transition duration-300 cursor-pointer"
+            className="text-white hover:font-semibold transition-all duration-200 ease-in-out cursor-pointer"
           >
             {/* Usamos un <span> en lugar de <Link> para evitar el comportamiento por defecto */}
             <span>{item.text}</span>
@@ -32,9 +32,9 @@ export default function Desktop() {
         ))}
         <button
           onClick={() => handleScroll("#comprar")}
-          className="py-1 px-6 bg-white text-red-600 rounded-2xl"
+          className="py-1 px-6 bg-white text-red-600 rounded-2xl transition-all duration-200 ease-in-out hover:bg-red-600 hover:text-white hover:font-semibold"
         >
-          Comprar
+          Comprar Ahora
         </button>
       </ul>
     </div>
