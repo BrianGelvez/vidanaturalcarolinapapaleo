@@ -28,8 +28,14 @@ export async function GET() {
 
     const data = await response.json();
     return NextResponse.json(data);
-  } catch (error) {
-    console.error('Error al hacer la solicitud:', error);
-    return NextResponse.json({ error: `Error al hacer la solicitud: ${error.message}` }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('Error al hacer la solicitud:', error);
+      return NextResponse.json({ error: `Error al hacer la solicitud: ${error.message}` }, { status: 500 });
+    } else {
+      console.error('Error desconocido:', error);
+      return NextResponse.json({ error: 'Error desconocido' }, { status: 500 });
+    }
   }
+  
 }
