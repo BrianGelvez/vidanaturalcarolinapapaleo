@@ -36,15 +36,15 @@ export default function ProductPrice() {
       });
       console.log("response", response);
 
-      // if (!response.ok) {
-      //   const errorDetails = await response.text();
-      //   throw new Error(`Error en la respuesta de la API: ${errorDetails}`);
-      // }
+      if (!response.ok) {
+        const errorDetails = await response.text();
+        throw new Error(`Error en la respuesta de la API: ${errorDetails}`);
+      }
 
-      // const result: ProductResponse = await response.json();
-      // console.log("Resultadooooo", result);
+      const result: ProductResponse = await response.json();
+      console.log("Resultadooooo", result);
 
-      // return result;
+      return result;
     } catch (error) {
       console.error("Error al hacer la solicitud:", error);
     }
