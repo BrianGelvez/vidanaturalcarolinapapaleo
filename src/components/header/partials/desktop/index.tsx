@@ -32,9 +32,9 @@ export default function Desktop() {
         ))}
         <button
           onClick={() => handleScroll("#comprar")}
-          className="py-1 px-6 bg-white text-red-600 rounded-2xl transition-all duration-200 ease-in-out hover:bg-red-600 hover:text-white hover:font-semibold"
+          className="py-[6px] px-6 bg-white text-red-600 rounded-2xl transition-all duration-200 ease-in-out hover:bg-red-600 hover:text-white hover:font-semibold"
         >
-          Comprar Ahora
+          Comprar
         </button>
       </ul>
     </div>

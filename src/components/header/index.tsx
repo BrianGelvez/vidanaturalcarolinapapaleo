@@ -28,7 +28,8 @@ export default function Header() {
       const fullHeight = document.documentElement.scrollHeight;
       const maxScroll = fullHeight - windowHeight;
       
-      const progress = Math.min(scrollPosition / (maxScroll * 0.5), 1);
+      // Cambiamos de 0.5 a 0.25 para que se complete más rápido
+      const progress = Math.min(scrollPosition / (maxScroll * 0.17), 1);
       setScrollProgress(progress);
     };
 
@@ -37,7 +38,6 @@ export default function Header() {
   }, []);
 
   const backgroundColor = `rgba(134, 6, 6, ${scrollProgress})`;
-
   return (
     <div
       className={`fixed top-0 left-0 w-full shadow-md z-50 transition-colors duration-300 ease-in-out`}
@@ -46,7 +46,7 @@ export default function Header() {
         backdropFilter: `blur(${8 * (1 - scrollProgress)}px)`,
       }}
     >
-      <div className="relative w-full flex flex-row justify-between items-start py-6 px-4 lg:px-10 xl:px-16 2xl:px-48">
+      <div className="relative w-full flex flex-row justify-between items-center py-4 px-4 lg:px-10 xl:px-16 2xl:px-48">
         <span className="cursor-pointer mt-1 lg:mt-0">
           <Link href="/">
             <Image
