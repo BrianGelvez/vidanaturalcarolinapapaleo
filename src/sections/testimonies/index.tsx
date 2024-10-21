@@ -130,26 +130,27 @@ export default function Testimonies() {
                 <p className="text-[12px]">Cordoba, Argentina</p>
               </div>
             </div>
-            {/* Testimonio 1 */}
+            {/* Testimonio 4 */}
             <div
-              className="flex-shrink-0 bg-black/30 backdrop-blur-md text-white p-6 rounded-lg w-[300px]
-                           h-[400px] flex flex-col justify-between items-start border-[1px] border-[#252525] shadow-full bg-gradient-to-tl from-red-600/20 via-transparent"
+              className="flex-shrink-0 bg-white backdrop-blur-md text-black p-6 rounded-2xl w-[300px] 
+             h-auto flex flex-col justify-center items-center gap-4 border-[1px] 
+             border-[#252525] shadow-full bg-gradient-to-tl from-black/40 via-transparent"
             >
-              <p className="text-[40px] font-bold leading-tight text-left">
-                <span className="text-red-600 text-[40px]">“</span> Ahora corro
+              <p className="text-[30px] font-semibold text-center text-black leading-none">
+                <span className="text-red-600 text-[40px]"><RiDoubleQuotesL /></span> Ahora corro
                 30 minutos más{" "}
-                <span className="text-red-600 text-[40px]">”</span>
+                {/* <span className="text-red-600 text-[40px]">”</span> */}
               </p>
-              <div className="w-full flex flex-col justify-start items-start">
+              <div className="w-full flex flex-col justify-center items-center">
                 <Image
                   src="/yo.webp"
                   alt="Testimonio de cliente"
                   width={1000}
                   height={1000}
-                  className="rounded-full object-cover w-[100px] h-[100px] border-solid border-[2px] border-red-600"
+                  className="rounded-full object-cover w-[80px] h-[80px] border-solid border-[1.5px] shadow-full"
                 />
               </div>
-              <div className="w-full flex flex-col justify-start items-start">
+              <div className="w-full flex flex-col justify-center items-center">
                 <p className="text-[12px]">Brian Gelvez</p>
                 <p className="text-[12px]">Cordoba, Argentina</p>
               </div>
