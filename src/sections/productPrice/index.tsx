@@ -3,16 +3,16 @@
 import { Product, ProductResponse } from "@/interfaces/vitalyPlus";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
-import InputPayment from "./inputPayments";
+// import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+// import InputPayment from "./inputPayments";
 
 export default function ProductPrice() {
   const [product, setProduct] = useState<Product | null>(null);
-  const [opened, setOpened] = useState(false);
+  // const [opened, setOpened] = useState(false);
 
-  const handleToggle = () => {
-    setOpened(!opened);
-  };
+  // const handleToggle = () => {
+  //   setOpened(!opened);
+  // };
 
   const formattedPrice = new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -68,22 +68,22 @@ export default function ProductPrice() {
         </div>
         <div className="w-full flex flex-col justify-start items-center">
           <p
-            className="text-[#DA0000] text-[40px] md:text-[50px] 
+            className="text-[#DA0000] text-[30px] md:text-[50px] 
                         leading-tight font-[700] text-center md:text-start"
           >
             Descubrí tu mejor versión
           </p>
           <p
-            className="text-black font-[400] text-[20px] md:text-[22px] 
+            className="text-black font-[400] text-[15px] mt-1 md:text-[22px] 
                        text-center md:text-start "
           >
             El <span className="font-semibold">cambio</span> que buscás, al{" "}
             <span className="font-semibold">precio</span> que necesitás.
           </p>
-          <div className="w-full flex flex-col justify-start items-center pt-6 pb-4">
+          <div className="w-full flex flex-col justify-start items-center pt-6 pb-2">
             <div className="w-auto flex flex-col justify-start items-start">
               <div className="w-auto flex flex-col justify-start items-start">
-                <p className="text-[#525252] font-[400] text-[22px] line-through">
+                <p className="text-[#525252] font-[400] text-[16px] line-through">
                   $55.900
                 </p>
                 {/* <p className="text-black">Antes</p> */}
@@ -93,8 +93,8 @@ export default function ProductPrice() {
                   {formattedPrice}
                 </p>
                 <span
-                  className="w-[75px] bg-[#DA0000] px-2 py-1 rounded-full 
-                                 text-center text-[20px]"
+                  className="w-auto shadow-light text-[#DA0000] py-1 px-2 rounded-full 
+                                 text-center text-[12px]"
                 >
                   - 20%
                 </span>
@@ -104,18 +104,20 @@ export default function ProductPrice() {
           <a
             href="/datosDeEnvio"
             className="bg-[#DA0000] hover:bg-red-800/90 backdrop-blur-md py-2 
-                       px-12 md:text-[20px] rounded-full transition-all duration-300 
+                       px-14 md:text-[20px] rounded-full transition-all duration-300 
                        ease-in-out transform hover:shadow-lg"
           >
             Comprar
           </a>
 
-          <div className="flex flex-col gap-3 py-2">
-            <p className="text-[#0D9D00] font-[400] text-[14px]">
+          <div className="flex flex-col justify-center items-center gap-1 pt-12">
+            <p className="text-[#0D9D00] font-[400] text-[14px] pb-4">
               * Envío a todo el país por Correo Argentino
             </p>
+            <Image src="/mercadoPago.webp" width={1000} height={1000} alt="Imagen de mercadoPago" className="w-[50%]"/>
+            <p className="text-black text-[12px]">*Descubrí los medios de pago</p>
           </div>
-          <label
+          {/* <label
             onClick={handleToggle}
             htmlFor="mp"
             className="w-full cursor-pointer"
@@ -150,7 +152,7 @@ export default function ProductPrice() {
             type="checkbox"
             className="peer/mp hidden"
           />
-          <InputPayment />
+          <InputPayment /> */}
         </div>
       </div>
     </div>
