@@ -9,8 +9,8 @@ export default function InputPayment() {
     z-50 px-6
     max-h-0 absolute top-full left-0
     peer-checked/mp:max-h-96
-    peer-checked/mp:shadow-slate-300
-    peer-checked/mp:shadow-tlight
+    peer-checked/mp:shadow-[#C2C2C2]
+    // peer-checked/mp:shadow-full
     transition-all duration-300 
     overflow-hidden
     bg-[#fafafa] backdrop-blur-sm
