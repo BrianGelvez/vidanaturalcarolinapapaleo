@@ -1,7 +1,7 @@
 import Header from "@/components/header";
 import ScrollToTopButton from "@/components/scrollToTopButton";
 import Benefits from "@/sections/benefits";
-import Footer from "@/sections/footer";
+// import Footer from "@/sections/footer";
 import FourSteps from "@/sections/fourSteps";
 import Home from "@/sections/home";
 import Parallax from "@/sections/parallax";
@@ -18,10 +18,10 @@ export default function Main() {
       <FourSteps />
       <Benefits />
       <Product />
-      <Parallax />
-      <Testimonies />
       <ProductPrice />
-      <Footer />
+      <Testimonies />
+      <Parallax />
+      {/* <Footer /> */}
       <ScrollToTopButton />
     </div>
   );
