@@ -52,7 +52,7 @@ export default function ProductPrice() {
     <div
       id="comprar"
       className="bg-white w-full h-auto flex flex-col lg:flex-row
-                 gap-12 pt-24 pb-14 px-4 md:px-8 lg:px-10 xl:px-16 
+                 gap-12 pt-24 pb-4 px-4 md:px-8 lg:px-10 xl:px-16 
                  2xl:px-48"
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center">
@@ -64,24 +64,24 @@ export default function ProductPrice() {
               {product?.description.split("s")[1]}
             </span>
           </p> */}
-          <Image src="/VitalyPlus.webp" width={300} height={300} alt="vytali" />
+          <Image src="/VitalyPlus.webp" width={1000} height={1000} className="w-[450px]" alt="vytali" />
         </div>
         <div className="w-full flex flex-col justify-start items-center">
           <p
-            className="text-[#DA0000] text-[26px] md:text-[50px] 
+            className="text-[#DA0000] text-[24px] md:text-[50px] py-2
                         leading-tight font-[700] text-center md:text-start"
           >
             Descubrí tu mejor versión
           </p>
           <p
-            className="text-black font-[400] text-[15px] mt-1 md:text-[22px] 
+            className="text-black font-[400] text-[13px] md:text-[22px] 
                        text-center md:text-start "
           >
             El <span className="font-semibold">cambio</span> que buscás, al{" "}
             <span className="font-semibold">precio</span> que necesitás.
           </p>
           <div className="w-full flex flex-col justify-start items-center pt-6 pb-2">
-            <div className="w-auto flex flex-col justify-start items-start">
+            <div className="w-auto flex flex-col justify-center items-center">
               <div className="w-auto flex flex-col justify-start items-start">
                 <p className="text-[#525252] font-[400] text-[16px] line-through">
                   $55.900
@@ -111,7 +111,7 @@ export default function ProductPrice() {
           </a>
 
           <div className="flex flex-col justify-center items-center gap-1 pt-12">
-            <p className="text-[#0D9D00] font-[400] text-[14px] pb-4">
+            <p className="text-[#0D9D00] font-[400] text-[14px] pb-8">
               * Envío a todo el país por Correo Argentino
             </p>
             <Image src="/mercadoPago.webp" width={1000} height={1000} alt="Imagen de mercadoPago" className="w-[50%]"/>
