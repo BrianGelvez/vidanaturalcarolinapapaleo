@@ -68,7 +68,7 @@ export default function ProductPrice() {
         </div>
         <div className="w-full flex flex-col justify-start items-center">
           <p
-            className="text-[#DA0000] text-[30px] md:text-[50px] 
+            className="text-[#DA0000] text-[26px] md:text-[50px] 
                         leading-tight font-[700] text-center md:text-start"
           >
             Descubrí tu mejor versión
