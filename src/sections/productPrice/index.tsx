@@ -86,8 +86,10 @@ export default function ProductPrice() {
             El <span className="font-semibold">cambio</span> que buscás, al{" "}
             <span className="font-semibold">precio</span> que necesitás.
           </p>
-          <div className="w-full flex flex-col justify-start items-center 
-                          md:items-start pt-6 lg:py-7 pb-2">
+          <div
+            className="w-full flex flex-col justify-start items-center 
+                          md:items-start pt-6 lg:py-7 pb-2"
+          >
             <div className="w-auto flex flex-col justify-center items-center md:items-start">
               <div className="w-auto flex flex-col justify-start items-start">
                 <p className="text-[#525252] font-[400] text-[16px] xl:text-[18px] line-through">
@@ -133,7 +135,9 @@ export default function ProductPrice() {
             </p>
           </div>
           <div className=" hidden md:block">
-            <p className="text-[#0D9D00] pt-4">*Envios a todo el pais por Correo Argentino</p>
+            <p className="text-[#0D9D00] pt-4">
+              *Envios a todo el pais por Correo Argentino
+            </p>
           </div>
           <div className="relative w-full flex flex-col justify-start items-center md:items-start">
             <label
@@ -142,9 +146,10 @@ export default function ProductPrice() {
               className="w-full cursor-pointer hidden md:block"
             >
               <div
+                data-handle={opened}
                 className="w-full flex flex-row justify-between items-center 
                     h-auto shadow-slate-200 shadow-full rounded-md 
-                    p-4 mt-7"
+                    p-4 mt-7 data-[handle=true]:rounded-b-none"
               >
                 <Image
                   src="/mercadoPago.webp"
