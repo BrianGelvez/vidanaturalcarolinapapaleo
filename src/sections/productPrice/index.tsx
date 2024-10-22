@@ -104,7 +104,7 @@ export default function ProductPrice() {
           <a
             href="/datosDeEnvio"
             className="bg-[#DA0000] hover:bg-red-800/90 backdrop-blur-md py-2 
-                       px-14 md:text-[20px] rounded-full transition-all duration-300 
+                       w-full text-center md:text-[20px] rounded-full transition-all duration-300 
                        ease-in-out transform hover:shadow-lg"
           >
             Comprar
