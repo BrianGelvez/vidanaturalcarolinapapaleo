@@ -3,16 +3,16 @@
 import { Product, ProductResponse } from "@/interfaces/vitalyPlus";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-// import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
-// import InputPayment from "./inputPayments";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import InputPayment from "./inputPayments";
 
 export default function ProductPrice() {
   const [product, setProduct] = useState<Product | null>(null);
-  // const [opened, setOpened] = useState(false);
+  const [opened, setOpened] = useState(false);
 
-  // const handleToggle = () => {
-  //   setOpened(!opened);
-  // };
+  const handleToggle = () => {
+    setOpened(!opened);
+  };
 
   const formattedPrice = new Intl.NumberFormat("es-AR", {
     style: "currency",
@@ -64,26 +64,33 @@ export default function ProductPrice() {
               {product?.description.split("s")[1]}
             </span>
           </p> */}
-          <Image src="/VitalyPlus.webp" width={1000} height={1000} className="w-[450px]" alt="vytali" />
+          <Image
+            src="/VitalyPlus.webp"
+            width={1000}
+            height={1000}
+            className="w-[450px]"
+            alt="vytali"
+          />
         </div>
-        <div className="w-full flex flex-col justify-start items-center">
+        <div className="w-full flex flex-col justify-start items-center md:items-start">
           <p
-            className="text-[#DA0000] text-[24px] md:text-[50px] py-2
+            className="text-[#DA0000] text-[24px] md:text-[25px] lg:text-[35px] xl:text-[40px] py-2
                         leading-tight font-[700] text-center md:text-start"
           >
             Descubrí tu mejor versión
           </p>
           <p
-            className="text-black font-[400] text-[13px] md:text-[22px] 
-                       text-center md:text-start "
+            className="text-black font-[400] text-[13px] 
+                       lg:text-[18px] xl:text-[20px] text-center md:text-start "
           >
             El <span className="font-semibold">cambio</span> que buscás, al{" "}
             <span className="font-semibold">precio</span> que necesitás.
           </p>
-          <div className="w-full flex flex-col justify-start items-center pt-6 pb-2">
-            <div className="w-auto flex flex-col justify-center items-center">
+          <div className="w-full flex flex-col justify-start items-center 
+                          md:items-start pt-6 lg:pt-7 pb-2 lg:pb-10">
+            <div className="w-auto flex flex-col justify-center items-center md:items-start">
               <div className="w-auto flex flex-col justify-start items-start">
-                <p className="text-[#525252] font-[400] text-[16px] line-through">
+                <p className="text-[#525252] font-[400] text-[16px] xl:text-[18px] line-through">
                   $55.900
                 </p>
                 {/* <p className="text-black">Antes</p> */}
@@ -104,55 +111,70 @@ export default function ProductPrice() {
           <a
             href="/datosDeEnvio"
             className="bg-[#DA0000] hover:bg-red-800/90 backdrop-blur-md py-2 
-                       w-full text-center md:text-[20px] rounded-full transition-all duration-300 
+                       w-full lg:w-[40%] text-center md:text-[20px] rounded-full transition-all duration-300 
                        ease-in-out transform hover:shadow-lg"
           >
             Comprar
           </a>
 
-          <div className="flex flex-col justify-center items-center gap-1 pt-12">
+          <div className="flex flex-col justify-center items-center md:items-start gap-1 pt-12 lg:pt-4 md:hidden">
             <p className="text-[#0D9D00] font-[400] text-[14px] pb-8">
               * Envío a todo el país por Correo Argentino
             </p>
-            <Image src="/mercadoPago.webp" width={1000} height={1000} alt="Imagen de mercadoPago" className="w-[50%]"/>
-            <p className="text-black text-[12px]">*Descubrí los medios de pago</p>
+            <Image
+              src="/mercadoPago.webp"
+              width={1000}
+              height={1000}
+              alt="Imagen de mercadoPago"
+              className="w-[50%]"
+            />
+            <p className="text-black text-[12px]">
+              *Descubrí los medios de pago
+            </p>
           </div>
-          {/* <label
-            onClick={handleToggle}
-            htmlFor="mp"
-            className="w-full cursor-pointer"
-          >
-            <div
-              className="w-full flex flex-row justify-between items-center 
-                            h-auto shadow-slate-200 shadow-full rounded-md 
-                            p-4 mt-7"
+          <div className=" hidden md:block">
+            <p className="text-[#0D9D00] pt-4">*Envios a todo el pais por Correo Argentino</p>
+          </div>
+          <div className="relative w-full flex flex-col justify-start items-center md:items-start">
+            <label
+              onClick={handleToggle}
+              htmlFor="mp"
+              className="w-full cursor-pointer hidden md:block"
             >
-              <Image
-                src="/mercadoPago.webp"
-                width={1000}
-                height={1000}
-                alt="Imagen de mercadoPago"
-                className="w-24"
-              />
-              <IoIosArrowForward
-                data-open={opened}
-                className="text-black data-[open=true]:hidden"
-                size={20}
-              />
-              <IoIosArrowDown
-                data-open={opened}
-                className="text-black hidden data-[open=true]:block "
-                size={20}
-              />
-            </div>
-          </label>
-          <input
-            id="mp"
-            name="menmpu"
-            type="checkbox"
-            className="peer/mp hidden"
-          />
-          <InputPayment /> */}
+              <div
+                className="w-full flex flex-row justify-between items-center 
+                    h-auto shadow-slate-200 shadow-full rounded-md 
+                    p-4 mt-7"
+              >
+                <Image
+                  src="/mercadoPago.webp"
+                  width={1000}
+                  height={1000}
+                  alt="Imagen de mercadoPago"
+                  className="w-24"
+                />
+                <IoIosArrowForward
+                  data-open={opened}
+                  className="text-black data-[open=true]:hidden"
+                  size={20}
+                />
+                <IoIosArrowDown
+                  data-open={opened}
+                  className="text-black hidden data-[open=true]:block "
+                  size={20}
+                />
+              </div>
+            </label>
+            <input
+              id="mp"
+              name="menmpu"
+              type="checkbox"
+              className="peer/mp hidden"
+            />
+
+            {/* El contenedor que se desplegará */}
+            <InputPayment />
+          </div>
         </div>
       </div>
     </div>

@@ -1,22 +1,33 @@
+import Image from "next/image";
+import { paymentMethods } from "./listPayments";
+
 export default function InputPayment() {
-    return (
-      <div
-        className="
+  return (
+    <div
+      className="
           w-full
-          z-10 px-6
-          max-h-0
+          z-50 px-6
+          max-h-0 absolute top-full left-0
           peer-checked/mp:max-h-96
           transition-all duration-300 
           overflow-hidden
-          bg-[#C003]/70 backdrop-blur-sm
+          bg-white backdrop-blur-sm
           shadow-lg 
           rounded-b-md
         "
-      >
-        <div className="py-4 space-y-4">
-          <h3 className="text-lg font-semibold">Holi</h3>
-          <p>Imagenes de los medios de pago.</p>
-        </div>
-      </div>
-    );
-  }
+    >
+     <div className="w-full flex flex-row flex-wrap items-center justify-center gap-4 px-4 py-6">
+      {paymentMethods.map((payment, index) => (
+        <Image
+          key={index}
+          src={payment.src}
+          width={payment.width}
+          height={payment.height}
+          alt={payment.alt}
+          className="rounded-xl p-1 border-[#DA0000] shadow-full"
+        />
+      ))}
+    </div>
+    </div>
+  );
+}
