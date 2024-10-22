@@ -52,7 +52,7 @@ export default function ProductPrice() {
     <div
       id="comprar"
       className="bg-white w-full h-auto flex flex-col lg:flex-row
-                 gap-12 pt-24 pb-4 px-4 md:px-8 lg:px-10 xl:px-16 
+                 gap-12 pt-24 pb-4 lg:pb-32 px-4 md:px-8 lg:px-10 xl:px-16 
                  2xl:px-48"
     >
       <div className="w-full flex flex-col md:flex-row justify-center items-center">
@@ -87,7 +87,7 @@ export default function ProductPrice() {
             <span className="font-semibold">precio</span> que necesitás.
           </p>
           <div className="w-full flex flex-col justify-start items-center 
-                          md:items-start pt-6 lg:pt-7 pb-2 lg:pb-10">
+                          md:items-start pt-6 lg:py-7 pb-2">
             <div className="w-auto flex flex-col justify-center items-center md:items-start">
               <div className="w-auto flex flex-col justify-start items-start">
                 <p className="text-[#525252] font-[400] text-[16px] xl:text-[18px] line-through">
