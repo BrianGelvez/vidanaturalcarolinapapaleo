@@ -27,8 +27,6 @@ const config: Config = {
     boxShadow: {
       full: "0 4px 8px rgba(0, 0, 0, 0.12), 0 -4px 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1), -4px 0 8px rgba(0, 0, 0, 0.1)",
       light: "0 1px 3px rgba(0, 0, 0, 0.1), 0 -1px 3px rgba(0, 0, 0, 0.05), 1px 0 3px rgba(0, 0, 0, 0.05), -1px 0 3px rgba(0, 0, 0, 0.05)",
-      blight: "0 1px 3px rgba(0, 0, 0, 0.1), 1px 0 3px rgba(0, 0, 0, 0.05), -1px 0 3px rgba(0, 0, 0, 0.05)",
-      tlight: "1px 0 3px rgba(0, 0, 0, 0.05), -1px 0 3px rgba(0, 0, 0, 0.05), 0 -1px 3px rgba(0, 0, 0, 0.05)"
     },
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports

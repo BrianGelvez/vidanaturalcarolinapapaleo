@@ -148,7 +148,7 @@ export default function ProductPrice() {
               <div
                 data-handle={opened}
                 className="w-full flex flex-row justify-between items-center 
-                    h-auto shadow-[#C2C2C2] bg-[#fafafa] shadow-full rounded-md 
+                    h-auto bg-[#fafafa] shadow-full shadow-[#E3E3E3] rounded-md
                     p-4 mt-7 data-[handle=true]:rounded-b-none"
               >
                 <Image
