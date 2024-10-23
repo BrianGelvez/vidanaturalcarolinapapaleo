@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div
       id="inicio"
-      className="relative w-full h-[55vh] flex justify-center items-center bg-red-600"
+      className="relative w-full h-[50vh] flex justify-center items-center bg-red-600"
     >
       <Image
         src="/FondoRedHome.webp"
@@ -30,7 +30,7 @@ export default function Home() {
         className="flex lg:hidden"
       />
       <div className="absolute inset-0 bg-black/50" />
-      <div className="z-10 bg-yellow-300 flex flex-col justify-center gap-5 mt-44 items-center">
+      <div className="z-10 flex flex-col justify-center gap-5 mt-56 items-center">
         <h1 className="text-[30px] md:text-[55px] text-center lg:text-start text-white font-[700] leading-[0.9] tracking-[-0.5px]">
           SER VIDA <br />
           SER NATURALEZA <br />
@@ -59,3 +59,6 @@ export default function Home() {
 }
 
 // min0:w-[250px] min1:w-[330px] md:w-[330px]
+{
+  /* <div className="hidden lg:block absolute bottom-0 left-0 w-full h-[12vh] bg-white z-10" /> */
+}
