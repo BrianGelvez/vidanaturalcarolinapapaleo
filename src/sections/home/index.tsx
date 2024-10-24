@@ -41,7 +41,7 @@ export default function Home() {
             onClick={() => handleScroll("#vitalyplus")}
             className="bg-[#DA0000]/80 backdrop-blur-sm w-auto px-16 py-2 md:text-[18px] font-semibold rounded-full"
           >
-            Comprar
+            Conseguila YA
           </button>
         </div>
         <div className=" lg:w-1/2 flex justify-center lg:justify-end lg:pr-6">
