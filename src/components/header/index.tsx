@@ -29,7 +29,7 @@ export default function Header() {
       const maxScroll = fullHeight - windowHeight;
       
       // Cambiamos de 0.5 a 0.25 para que se complete más rápido
-      const progress = Math.min(scrollPosition / (maxScroll * 0.17), 1);
+      const progress = Math.min(scrollPosition / (maxScroll * 0.10), 1);
       setScrollProgress(progress);
     };
 
@@ -43,32 +43,32 @@ export default function Header() {
       className={`fixed top-0 left-0 w-full shadow-md z-50 transition-colors duration-300 ease-in-out`}
       style={{
         backgroundColor,
-        backdropFilter: `blur(${8 * (1 - scrollProgress)}px)`,
+        backdropFilter: `${8 * (1 - scrollProgress)}px`,
       }}
     >
       <div className="relative w-full flex flex-row justify-between items-start lg:items-center py-4 px-4 lg:px-10 xl:px-16 2xl:px-48">
         <span className="cursor-pointer mt-1 lg:mt-0">
           <Link href="/">
             <Image
-              width={220}
-              height={220}
+              width={120}
+              height={120}
               src="/LogoVidaNaturalBlanco.webp"
-              alt="Logo de Diego Bustos, abogado penalista"
+              alt=""
             />
           </Link>
         </span>
 
-        <div className="w-full flex flex-col justify-center items-end">
+        <div className="w-auto flex flex-col justify-center items-end">
           {pathname === "/datosDeEnvio" ? (
             <button
               onClick={handleGoBack}
-              className="backdrop-blur-md shadow-light text-white py-2 px-4 rounded-sm"
+
             >
               Volver
             </button>
           ) : (
             <>
-              <div className="w-full flex flex-col items-end lg:hidden">
+              <div className="w-auto flex flex-col items-end lg:hidden">
                 <label
                   htmlFor="menu"
                   className="cursor-pointer flex justify-end items-end"
@@ -76,7 +76,7 @@ export default function Header() {
                 >
                   <div
                     className={classNames(
-                      "tham tham-e-squeeze tham-w-8",
+                      "tham tham-e-squeeze tham-w-6",
                       { "tham-active": opened },
                       ""
                     )}

@@ -46,11 +46,11 @@ export default function Home() {
         </div>
         <div className=" lg:w-1/2 flex justify-center lg:justify-end lg:pr-6">
           <Image
-            src="/VitalyPlus.webp"
+            src="/productoHome.webp"
             width={1000}
             height={1000}
             alt="Vitaly Plus"
-            className="w-[250px]"
+            className="w-[300px] mt-6"
           />
         </div>
       </div>

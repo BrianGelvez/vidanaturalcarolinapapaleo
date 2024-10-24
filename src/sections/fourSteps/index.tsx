@@ -6,10 +6,10 @@ export default function FourSteps() {
       <div className="h-36" />
       <div className="w-full">
         <div className="w-full">
-          <p className="text-[#DA0000] text-[30px] font-[700] text-center">
+          <h2 className="text-[#DA0000] text-[30px] font-[700] text-center leading-none">
             Qué es <br />
             <span className="text-black">Vitaly</span> Plus?
-          </p>
+          </h2>
         </div>
         <div className="">
           <Image
@@ -17,7 +17,7 @@ export default function FourSteps() {
             width={1000}
             height={1000}
             alt="Vitaly Plus"
-            className=""
+            className=" pt-8"
           />
         </div>
       </div>
