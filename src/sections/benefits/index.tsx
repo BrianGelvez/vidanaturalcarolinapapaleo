@@ -22,13 +22,13 @@ export default function Benefits() {
               className="w-full"
             />
             <div className="absolute bottom-[-20px] w-full flex justify-center items-center">
-              <button className="w-auto text-center bg-[#DA0000] px-14 py-2 rounded-full">
+              <button className="w-auto text-center bg-[#DA0000] px-16 py-2 rounded-full">
                 Comprar
               </button>
             </div>
           </div>
         </div>
-        <div className="mt-24 flex flex-col gap-2">
+        <div className="mt-16 flex flex-col gap-2">
           {BenefitsData.map((benefit, index) => (
             <Dialog.Root key={index}>
               <Dialog.Trigger className="w-full flex flex-col">
